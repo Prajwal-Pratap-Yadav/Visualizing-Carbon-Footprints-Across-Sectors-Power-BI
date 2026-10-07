@@ -1,0 +1,13 @@
+{
+  "calendar_days": 1612,
+  "maximum_absolute_residual_mt_co2": "0.000136",
+  "methods": "Decimal accounting on retained source rows; single geography; complete-year and matched-calendar periods; source-vintage/unit/coverage caveats apply.",
+  "naive_all_labels_divided_by_world": "2.054054692198218266001835435962242507833",
+  "retained_records": 135408,
+  "spatial_checks": 9672,
+  "world_2019_2022_cagr_fraction": "0.007257168767901222570901751422143415965",
+  "world_2023_jan_may_total_mt_co2": "15113.988959",
+  "world_calendar_matched_2023_2022_ytd_change_percent": "0.341402943499572511286449115021404277200",
+  "world_complete_2022_total_mt_co2": "36119.462025",
+  "world_complete_2022_yoy_percent": "1.722091751282524785698328312287454501100"
+}
