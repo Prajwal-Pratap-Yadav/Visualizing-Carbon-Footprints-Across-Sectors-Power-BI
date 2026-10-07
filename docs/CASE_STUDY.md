@@ -19,3 +19,9 @@ Retain the original report and all 135,408 source records. Verify the immediate 
 ## Engineering judgment
 
 The strongest result is the accounting contract, not a claim of scientific accuracy. Immediate uploader provenance is verified; primary release lineage and original unit metadata remain qualified. The source estimates do not support per-capita rankings, causal findings or a government-inventory endorsement. The original PBIX has been decoded read-only, with cached arithmetic cross-checks; Desktop refresh/render and the proposed DAX model are not validated outputs. [Evidence](EVIDENCE.md), [methodology](methodology.md) and [decisions](adr/002-safe-geography.md) document what a reviewer can reproduce and what remains manual.
+
+## Inspect the delivered experience
+
+![Actual companion report, WORLD complete 2022](assets/report-desktop.png)
+
+The [offline HTML](assets/carbon-report.html) exposes the same decimal-backed totals, date-window choices, source attribution and accounting caveats. [YTD](assets/report-ytd.png) and [mobile](assets/report-mobile.png) captures demonstrate partial-year labels and responsive presentation. These are actual Chromium captures of the companion report, not Power BI exports; [receipt](../reports/browser/capture-manifest.json) records their source and hashes.

@@ -1,0 +1,45 @@
+{
+  "source_git_sha": "42749ad1cbf9e71fc6bd8f050024000665c04e4d",
+  "capture_source_git_sha": "2bbda896926cbc098f54a911cfc79325c46f957d",
+  "browser_version": "153.0.8010.0",
+  "playwright_version": "1.63.0",
+  "platform": "linux/x64",
+  "browser_provider": "reviewed local executable override",
+  "report_sha256": "bd466819627d6640dd7b1641a3367dc587a024e77e795944ca4105ed338bb452",
+  "captures": [
+    {
+      "name": "report-desktop",
+      "width": 1440,
+      "height": 1000,
+      "geography": "WORLD",
+      "year": "2022",
+      "path": "docs/assets/report-desktop.png",
+      "total": "36,119.46 Mt",
+      "period": "Complete calendar year",
+      "sha256": "85095117c67c8cdfda9cae07308b6822020fa17077eb26c7a8a7510d5558eabf"
+    },
+    {
+      "name": "report-ytd",
+      "width": 1440,
+      "height": 1000,
+      "geography": "WORLD",
+      "year": "2023",
+      "path": "docs/assets/report-ytd.png",
+      "total": "15,113.99 Mt",
+      "period": "Jan–May year to date · not annualised",
+      "sha256": "b93c427ebd6e8dc91a51d7a0d2ec70b168756ed0db74851f8763cf61d2534022"
+    },
+    {
+      "name": "report-mobile",
+      "width": 390,
+      "height": 844,
+      "geography": "China",
+      "year": "2022",
+      "path": "docs/assets/report-mobile.png",
+      "total": "11,077.14 Mt",
+      "period": "Complete calendar year",
+      "sha256": "1e7094ddd5d5474ff13d6973151a8dbcead90fac4c9bbc976a4e14c1d9f7b82e"
+    }
+  ],
+  "scope": "Actual Chromium capture of the Python companion HTML; not Power BI output."
+}
