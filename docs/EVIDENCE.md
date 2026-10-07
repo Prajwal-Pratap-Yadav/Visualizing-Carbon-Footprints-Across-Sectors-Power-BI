@@ -1,0 +1,33 @@
+# Evidence register
+
+## Original baseline and measured data
+
+Original main `47e91e43e6731faef9a148f60e9504e94f563d62` has three historical commits and four files, with no tests/build/CI. [Baseline inventory](../reports/baseline-files.json) records original bytes/hashes. CSV, PBIX, historical README and MIT notice are preserved; existing history is retained. A public Kaggle v1 archive member exactly matches the original CSV; [receipt](../data/source-receipt.json) records creator, license and both hashes. Original Carbon Monitor release lineage is unverified.
+
+Local numeric reproduction used Linux x86_64, Python 3.12.14, matplotlib 3.11.2 and nbformat 5.11.1 on 2026-10-07. Artifact generation source was `184a1f7` (local owner commit); the [run manifest](../reports/run_manifest.json) contains the full SHA, actual worktree state, environment and artifact hashes. Its worktree list includes previously generated untracked evidence; no clean-tree claim is made for that initial artifact run. Remote publication preserves the same content with owner identity; Git object SHAs differ because the authenticated publisher recreates commits. A clean published-source reproduction and CPU CI record will be added after those runs actually finish.
+
+| Claim | Value | Command | Source commit / date / environment | Artifact |
+|---|---|---|---|---|---|
+| Source retention/coverage | 135,408 records, 14 labels, 6 sectors, 1,612 dates | `make run` | Run-manifest source; 2026-10-07; Linux/Python 3.12.14 | [Reconciliation](../reports/reconciliation.json) |
+| Scope trap | 2.054054692198218266… × WORLD for all labels | `make reproduce` | Same actual source/env | Profile; `geography-trap` notebook cell |
+| Spatial consistency | 9,672 checks/pass; maximum gap 0.000136 interpreted MtCO2 | `make run` | Same actual source/env | Profile; generated full residual CSV |
+| 2022 WORLD derived sum / complete YoY | 36,119.462025 MtCO2 / 1.722091751282524785…% | `make reproduce` | Same actual source/env; documented unit interpretation | [Analysis](../reports/analysis.json); `complete-years` cell |
+| 2023 Jan–May / matched YoY | 15,113.988959 MtCO2 / 0.341402943499572511…% | `make reproduce` | Same actual source/env; 151 observed days | [Insights](../reports/insights.json); `matched-ytd` cell |
+| Actual notebook execution | Six ordinary-Python code cells, captured stdout | `scripts/execute_notebook.py` | Same actual source/env | [Notebook](../notebooks/01_accounting.ipynb); explicit execution mode |
+| Original binary inspection | Four tables, three calculated tables, thirteen calculated columns, zero explicit measures; four pages/25 native visuals | `make setup-inspect inspect` | Local `f5fbc600`; 2026-10-07; PBIXRay 0.15.5/pandas 3.0.6/numpy 2.5.3/Python 3.12.14 | [Catalog](../reports/model/catalog.json) |
+| Cache/source comparison | 135,408 matching grains; max per-value binary-float difference 1.1102230246251565e-16 | Same inspector | Same inspection source/env | [Cross-checks](../reports/model/arithmetic-crosschecks.json) |
+| Independent arithmetic | Every raw/export grain, spatial residual, annual/monthly/YTD sum/share passes | `scripts/check_reproduction.py` | Local `184a1f7`; 2026-10-07; independent 50-digit Decimal | Processed files, profile, report data and notebook hashes |
+| Separate pandas time intelligence | Annual/YoY/share/CAGR/latest strict seven-day arithmetic within explicit tolerances | `scripts/check_model.py reports/model` | Local `184a1f7`; 2026-10-07; decimal versus saved independent pandas values | Cross-check JSON; no DAX output claim |
+| Real hero/offline report | Generated from retained source; exact decimal payload | `make reproduce` | Run-manifest source/env | [Hero](assets/carbon-review.png), [offline HTML](assets/carbon-report.html), [report data](../reports/report-data.json) |
+
+The first local source test run passed 48 meaningful tests with 98.29% statement coverage over `src/carbon_audit`; scripts, binary decoder, browser rendering and Power BI are excluded from that coverage. A later full verification will record its actual counts and source. Coverage is a scoped statement measure, not an accuracy or security claim.
+
+## Review and security scope
+
+Full original history and the first twelve overhaul commits were scanned with checksum-verified gitleaks 8.30.1 and zero findings. One historical CSV/PBIX object was reviewed through raw rows, archive/layout, import/security metadata and cached tables. No credential or person-level record was found. The original owner local import path remains in the byte-preserved binary and is redacted in the text catalog. Text scanners do not decode compressed binary models; these are separate scoped reviews.
+
+The hero was actually rendered and visually inspected. Clipped labels/overlapping text in the first draft were corrected before this committed image. It is a Python re-creation, not a Power BI export. Browser interaction/accessibility checks and genuine Chromium captures remain pending in this evidence revision: official browser CDN download attempts failed locally with truncated archives/proxy timeouts. No pass or screenshot is claimed from a failed install.
+
+## What remains unverified
+
+Desktop refresh/render, proposed DAX engine results, primary historical release lineage, uploader-specific unit metadata and original shipping/aviation allocation. No independent all-sector inventory total, scientific accuracy certification, current-emissions estimate, CO2e, population/per-capita or causal result is supplied. [Methodology](methodology.md) and the actual roadmap distinguish these constraints from implemented checks. Repository description/topics/social preview administration is outside the installed GitHub connection's permissions and remains an owner action.

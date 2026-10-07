@@ -30,7 +30,7 @@ Issues = "https://github.com/Prajwal-Pratap-Yadav/Visualizing-Carbon-Footprints-
 packages = ["src/carbon_audit"]
 
 [tool.hatch.build.targets.sdist]
-include = ["src/", "tests/", "scripts/", "configs/", "docs/", "reports/", "notebooks/", "README.md", "LICENSE", "CHANGELOG.md", "Makefile", "pyproject.toml", "requirements*.txt", "data/LICENSE.md", "data/source-receipt.json", "data/raw/emissions.csv", "powerbi/original/"]
+include = ["src/", "tests/", "scripts/", "configs/", "docs/", "reports/", "notebooks/", "README.md", "LICENSE", "CHANGELOG.md", "Makefile", "pyproject.toml", "requirements*.txt", "data/LICENSE.md", "data/source-receipt.json", "data/raw/emissions.csv", "powerbi/", "package.json", "package-lock.json", "playwright.config.mjs", ".github/", ".editorconfig", ".pre-commit-config.yaml", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md", "CITATION.cff"]
 
 [tool.ruff]
 target-version = "py311"
