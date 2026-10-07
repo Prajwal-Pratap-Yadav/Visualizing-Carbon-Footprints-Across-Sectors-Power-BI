@@ -1,0 +1,9 @@
+# Data attribution and licence scopes
+
+The byte-preserved `raw/emissions.csv` matches `dataset.csv` in Saloni Jhalani's **CO2 Emissions by Sectors**, Kaggle dataset 3562158, version 1, July 27, 2023. [Source receipt](source-receipt.json) records the public metadata/download URL and actual checksums. The uploader specifies **Database: Open Database, Contents: Database Contents**: [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/) for the database and [DbCL 1.0](https://opendatacommons.org/licenses/dbcl/1-0/) for its contents.
+
+Retain this attribution and the licence links with the original or adapted databases. Generated normalized tables, aggregation tables and audit records are adaptations of that database and are made available under the same database/contents terms. Original values are retained; modifications add canonical geography keys, explicit scope/unit interpretation, conversion, aggregation and diagnostic flags. Figures and the offline report acknowledge the source and include this notice; the underlying reproducible database and transformation code are available here.
+
+The original CSV does not carry a primary-publisher receipt. Its schema/coverage are compatible with Carbon Monitor, whose [fair-use policy](https://carbonmonitor.org/) requests citation; [the methods paper](https://doi.org/10.1038/s41597-020-00708-7) describes fossil-fuel/cement CO2 estimates. Carbon Monitor's current download contains revisions and changed geography coverage; it is **not** the same original release. Do not substitute current data or claim verified original publisher lineage.
+
+Existing [MIT LICENSE](../LICENSE) remains unchanged for repository code. New standalone package code and its explicitly synthetic fixture use MIT. MIT does not relabel the real dataset or derived database. The preserved original report/README remain historical project artifacts; no new Power BI render or behavior validation is implied.
