@@ -2,7 +2,7 @@ PYTHON ?= python3
 PY := .venv/bin/python
 UV := .venv/bin/uv
 
-.PHONY: setup setup-dev setup-inspect security lint format typecheck test run reproduce inspect docs build audit clean
+.PHONY: setup setup-dev setup-inspect security lint format typecheck test run reproduce inspect docs build audit clean setup-browser browser-test capture
 
 setup:
 	$(PYTHON) -m venv .venv
@@ -62,3 +62,14 @@ security:
 clean:
 	rm -rf data/processed data/interim reports/local build dist .pytest_cache .mypy_cache .ruff_cache .coverage
 	find src tests scripts -type d -name __pycache__ -prune -exec rm -rf {} +
+
+setup-browser:
+	npm ci --ignore-scripts
+	npm exec -- playwright install --only-shell chromium
+
+browser-test:
+	npm run lint
+	npm test
+
+capture:
+	npm run capture

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite the software and separately attribute the source database under its own terms."
+title: "Carbon Accounting Review"
+type: software
+authors:
+  - family-names: "Yadav"
+    given-names: "Prajwal Pratap"
+version: 0.1.0
+date-released: 2026-10-07
+repository-code: "https://github.com/Prajwal-Pratap-Yadav/Visualizing-Carbon-Footprints-Across-Sectors-Power-BI"
+license: MIT
+abstract: "Reproducible geography and calendar accounting for an archived daily CO2 snapshot; original Power BI evidence preserved. Real source and adapted databases retain ODbL/DbCL attribution."
