@@ -40,7 +40,7 @@ reproduce:
 	$(PY) scripts/execute_notebook.py
 	$(PY) scripts/check_reproduction.py
 
-inspect:
+inspect: run
 	.venv-inspect/bin/python scripts/inspect_model.py --output reports/local/model
 	$(PY) scripts/check_model.py reports/local/model
 
