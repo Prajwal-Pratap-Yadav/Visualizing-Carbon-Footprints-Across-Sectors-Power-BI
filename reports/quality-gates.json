@@ -1,0 +1,25 @@
+{
+  "source_git_sha": "b651546983c3832728aad784e3f7cf5c8e0c9317",
+  "quickstart_seconds": 40.734,
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cache_state": "New empty pip/uv directories, pip cache disabled; network/proxy/OS caches uncontrolled",
+  "commands": "README clone/setup/run with explicit portfolio-overhaul branch before main merge",
+  "initial_and_final_tree": "Clean fresh source; final status below",
+  "final_status": [],
+  "developer_verification": "Actual clean-clone setup-dev/lint/types/48-case tests/real audit/reproduction/docs/build/inspection/security completed successfully at b651546983c3832728aad784e3f7cf5c8e0c9317; no timed developer-install claim",
+  "clean_published_reproduction_source": "f607ead031adca4673e8d71e26b311908ca7b273",
+  "ten_second_presentation_gate": {
+    "result": "passed scoped self-review",
+    "evidence": "Actual GitHub title/tagline, four loaded badges, real 2400px hero, readable source/scope caption; not an external recruiter timing study"
+  },
+  "sixty_second_gate": {
+    "result": "passed runtime quickstart",
+    "measured_seconds": 40.734,
+    "scope": "new empty pip/uv directories and pip cache disabled; network/proxy/OS cache state uncontrolled"
+  },
+  "five_minute_review_gate": {
+    "result": "passed scoped source/evidence/history review",
+    "evidence": "Full fresh developer verification plus structured source/tests/CI/owner commit review; no independent stranger comprehension experiment"
+  }
+}

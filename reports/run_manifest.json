@@ -1,15 +1,7 @@
 {
   "data_sha256": "5ea4c7e923a7efe42994b6933a62bd801f19f9338c6c29ab0d0825288538158d",
-  "dirty_worktree_files_at_start": [
-    "?? docs/",
-    "?? notebooks/",
-    "?? reports/analysis.json",
-    "?? reports/insights.json",
-    "?? reports/reconciliation.json",
-    "?? reports/report-data.json",
-    "?? reports/run_manifest.json"
-  ],
-  "generated_at_utc": "2026-10-07T08:21:11.132387+00:00",
+  "dirty_worktree_files_at_start": [],
+  "generated_at_utc": "2026-10-07T16:37:24.073094+00:00",
   "generated_sha256": {
     "docs/assets/carbon-report.html": "bd466819627d6640dd7b1641a3367dc587a024e77e795944ca4105ed338bb452",
     "docs/assets/carbon-review.png": "98621285be3dda25e069d5317b54c642f626419dc272a23a88777bda70bb0692",
@@ -26,7 +18,7 @@
   "python": "3.12.14",
   "scope": "Real archived-source decimal accounting and companion views; no Power BI refresh/render or DAX engine evaluation, no scientific accuracy certification.",
   "seed": "none; deterministic decimal accounting and display",
-  "source_git_sha": "184a1f7d14c6e6939f190956e1e85d1f0729ec9d",
+  "source_git_sha": "f607ead031adca4673e8d71e26b311908ca7b273",
   "versions": {
     "matplotlib": "3.11.2",
     "nbformat": "5.11.1"
