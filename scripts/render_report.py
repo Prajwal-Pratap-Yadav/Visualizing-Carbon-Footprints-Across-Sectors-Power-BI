@@ -98,7 +98,7 @@ def hero(rows: list[Observation], profile, analysis, path):
     )
     fig = plt.figure(figsize=(16, 9), dpi=150)
     grid = fig.add_gridspec(
-        2, 2, left=0.06, right=0.97, bottom=0.13, top=0.77, hspace=0.60, wspace=0.27
+        2, 2, left=0.11, right=0.97, bottom=0.20, top=0.77, hspace=0.60, wspace=0.34
     )
     fig.text(0.06, 0.94, "CARBON / ACCOUNTING REVIEW", color="#38bdf8", fontsize=12, weight="bold")
     fig.text(
@@ -165,15 +165,16 @@ def hero(rows: list[Observation], profile, analysis, path):
     ax.set_axis_off()
     ax.text(
         0,
-        0.91,
+        0.95,
         "04 / Accounting checks and limits",
         fontsize=14,
         weight="bold",
+        va="top",
         transform=ax.transAxes,
     )
     ax.text(
         0,
-        0.62,
+        0.61,
         f"{profile['spatial_passes']:,} / {profile['spatial_checks']:,}",
         fontsize=30,
         weight="bold",
@@ -182,19 +183,20 @@ def hero(rows: list[Observation], profile, analysis, path):
     )
     ax.text(
         0,
-        0.45,
+        0.40,
         "daily sector partition checks pass",
-        fontsize=12,
+        fontsize=11,
         color="#aec0d7",
         transform=ax.transAxes,
     )
     ax.text(
         0,
-        0.23,
+        0.29,
         f"Max gap: {profile['maximum_absolute_spatial_residual_mt_co2']} interpreted Mt CO₂\nNo independent all-sector inventory total\nUnit / source-vintage assumptions remain explicit",
-        fontsize=11,
+        fontsize=10,
         color="#aec0d7",
-        linespacing=1.6,
+        linespacing=1.4,
+        va="top",
         transform=ax.transAxes,
     )
     for axes in fig.axes:

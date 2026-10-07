@@ -2,8 +2,13 @@
 
 import json
 import sys
+from datetime import date
 from decimal import Decimal
 from pathlib import Path
+
+from carbon_audit.analytics import daily_series, rolling_mean
+from carbon_audit.domain import Policy
+from carbon_audit.extract import read_source
 
 ROOT = Path(__file__).resolve().parents[1]
 output = Path(sys.argv[1])
@@ -32,6 +37,13 @@ assert abs(
     Decimal(analysis["cagr_complete_years_fraction"])
     - Decimal(str(cross["pandas_world_complete_2019_2022_cagr_fraction"]))
 ) < Decimal("1e-12")
+policy = Policy.load(ROOT / "configs/policy.json")
+rows = read_source(ROOT / "data/raw/emissions.csv", policy)
+latest = rolling_mean(daily_series(rows, "WORLD"))[-1]
+assert latest[0] == date(2023, 5, 31) and latest[1] is not None
+assert abs(
+    latest[1] - Decimal(str(cross["pandas_world_latest_strict_7_day_mean_mt_co2"]))
+) < Decimal("1e-12")
 print(
-    "Original model drift and independent pandas annual/share/YoY/CAGR cross-checks pass; no DAX output claim."
+    "Original model drift and independent pandas annual/share/YoY/CAGR/strict-seven-day cross-checks pass; no DAX output claim."
 )

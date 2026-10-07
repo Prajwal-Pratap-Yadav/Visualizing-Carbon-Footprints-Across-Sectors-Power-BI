@@ -1,93 +1,737 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Carbon Accounting Review</title>
-  <style>
-    :root { color-scheme:dark; --bg:#0b1220; --panel:#111c2e; --line:#29394f; --text:#e8eff8; --muted:#aec0d7; --blue:#38bdf8; --gold:#fbbf24; }
-    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,sans-serif; }
-    main { max-width:1280px; padding:36px 28px; margin:auto; } a { color:#7dd3fc; } a:focus-visible,select:focus-visible,summary:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
-    .eyebrow { color:var(--blue); letter-spacing:.16em; text-transform:uppercase; font-size:12px; font-weight:700; }
-    header { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; } h1 { font-size:clamp(30px,4vw,48px); line-height:1.15; margin:10px 0; letter-spacing:-.03em; } h2 { font-size:19px; margin:0 0 5px; } p { margin:8px 0; } .muted { color:var(--muted); } .small { font-size:13px; }
-    .tag { border:1px solid var(--line); padding:8px 12px; border-radius:30px; white-space:nowrap; color:var(--muted); font-size:13px; }
-    .controls { display:flex; gap:18px; flex-wrap:wrap; padding:24px 0; } label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; } select { background:#15243a; border:1px solid #53647e; border-radius:8px; color:var(--text); font:inherit; padding:10px 14px; min-width:180px; }
-    .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:22px; } .card,.panel { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px; } .metric { font-size:30px; font-weight:720; letter-spacing:-.03em; margin:8px 0; } .metric sup { font-size:14px; color:var(--muted); margin-left:5px; }
-    .grid { display:grid; grid-template-columns:2fr 1fr; gap:18px; align-items:start; } .span { grid-column:1/-1; } .legend { display:flex; gap:12px 18px; flex-wrap:wrap; margin-top:14px; color:var(--muted); font-size:12px; } .dot { display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:6px; }
-    #chart { width:100%; height:auto; display:block; margin-top:12px; } .share-row { display:grid; grid-template-columns:1fr auto; gap:5px; padding:9px 0; font-size:13px; } .track { height:6px; background:#26364e; grid-column:1/-1; border-radius:4px; overflow:hidden; } .fill { height:100%; border-radius:4px; }
-    .audit { display:grid; grid-template-columns:170px 1fr; gap:24px; background:#162034; border-color:#a77922; } .audit .metric { color:var(--gold); font-size:44px; } .audit h2 { color:#fde68a; } .checks { display:flex; flex-wrap:wrap; gap:12px 30px; padding-top:12px; color:var(--muted); font-size:13px; }
-    .note { border-left:3px solid #38bdf8; padding-left:14px; } details { margin-top:18px; } summary { cursor:pointer; color:#7dd3fc; } .scroll { overflow:auto; } table { border-collapse:collapse; width:100%; margin-top:14px; font-size:12px; } th,td { text-align:right; border-bottom:1px solid var(--line); padding:10px 8px; white-space:nowrap; } th:first-child,td:first-child { text-align:left; } caption { text-align:left; color:var(--muted); padding:8px 0; }
-    footer { padding-top:26px; color:var(--muted); font-size:12px; } .status { margin-left:auto; align-self:end; max-width:450px; color:var(--muted); font-size:13px; }
-    @media(max-width:900px) { .kpis { grid-template-columns:repeat(2,1fr); } .grid { grid-template-columns:1fr; } header { display:block; } .tag { display:inline-block; margin-top:10px; } .status { margin-left:0; } }
-    @media(max-width:520px) { main { padding:24px 16px; } .card,.panel { padding:16px; } .metric { font-size:25px; } .audit { grid-template-columns:1fr; gap:4px; } .audit .metric { margin:0; } .controls>div { width:100%; } select { width:100%; } }
-    @media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; } }
-  </style>
-</head>
-<body>
-<main>
-  <header><div><div class="eyebrow">Data review / carbon accounting</div><h1>Carbon totals you can trace.</h1><p class="muted">Read the geography correctly. Compare the same calendar window.</p></div><div class="tag">Archived snapshot · 2019–31 May 2023</div></header>
-  <section class="controls" aria-label="Report filters">
-    <div><label for="geography">One source geography</label><select id="geography"></select></div>
-    <div><label for="year">Calendar period</label><select id="year"></select></div>
-    <p id="selection-note" class="status" aria-live="polite"></p>
-  </section>
-  <section class="kpis" aria-label="Selected period metrics">
-    <article class="card"><div class="muted small">Six-sector sum</div><div id="total" class="metric"></div><div id="period" class="muted small"></div></article>
-    <article class="card"><div id="change-label" class="muted small">Comparable change</div><div id="change" class="metric"></div><div id="change-note" class="muted small"></div></article>
-    <article class="card"><div class="muted small">Complete-year CAGR</div><div id="cagr" class="metric"></div><div class="muted small">2019–2022 · excludes 2023 YTD</div></article>
-    <article class="card"><div class="muted small">Observed calendar days</div><div id="days" class="metric"></div><div class="muted small">All six source sectors present</div></article>
-  </section>
-  <div class="grid">
-    <section class="panel"><h2>Monthly sector totals</h2><p class="muted small">Interpreted Mt CO₂, summed across observed days; partial years use the available months.</p><svg id="chart" viewBox="0 0 1000 390" role="img" aria-labelledby="chart-title"><title id="chart-title"></title></svg><div id="legend" class="legend"></div>
-      <details><summary>Inspect the monthly figures</summary><div class="scroll"><table id="monthly-table"><caption>Monthly sector totals, interpreted Mt CO₂. Exact decimal audit exports accompany this report.</caption><thead></thead><tbody></tbody></table></div></details>
-    </section>
-    <section class="panel"><h2>Share of the selected total</h2><p class="muted small">Denominator: the same geography, same dates and all six source sectors.</p><div id="shares"></div><p class="muted small note">These are activity-based CO₂ estimates. The snapshot supplies no population data, so per-capita comparisons are omitted.</p></section>
-    <section class="panel audit span"><div><div class="eyebrow">Reporting trap</div><div id="overlap" class="metric"></div><div class="muted small">all-label sum / WORLD</div></div><div><h2>Fourteen labels are not fourteen countries.</h2><p>WORLD overlaps every region. France, Germany, Italy, Spain and UK also overlap EU27 &amp; UK. Summing all labels inflates the total.</p><p class="muted small">This ratio covers the whole fixed snapshot. The safe reconstruction uses Brazil, China, EU27 &amp; UK, India, Japan, Russia, US and ROW exactly once, and checks them against WORLD for each day and sector.</p><div class="checks"><span id="rows"></span><span id="checks"></span><span id="residual"></span></div></div></section>
-    <section class="panel span"><h2>Scope before interpretation</h2><p class="muted small">Source units are interpreted as Mt CO₂ from the preserved model's mega-ton label, the CO₂ dataset title and Carbon Monitor's public display; the uploader supplies no unit metadata. Six-sector totals are derived here, with no independent all-sector inventory total in the CSV. This is CO₂, with no GWP conversion or CO₂e claim. Land use lies outside the referenced fossil-fuel/cement scope; separate shipping treatment and international aviation allocation remain unverified.</p><p class="muted small">The matching Kaggle v1 download is verified. Original Carbon Monitor release lineage remains unverified, and its current data has revisions and different geography coverage. Reconciliation tests arithmetic and overlap handling; it does not certify emission estimates.</p></section>
-  </div>
-  <footer><strong>Python re-creation, not a Power BI export.</strong> The preserved PBIX has no verified refresh/render in this environment.<br>Data: Saloni Jhalani, <a href="https://www.kaggle.com/datasets/saloni1712/co2-emissions">CO₂ Emissions by Sectors, Kaggle v1</a> · database <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>, contents <a href="https://opendatacommons.org/licenses/dbcl/1-0/">DbCL 1.0</a>. Normalized/aggregated database and transformation code are included in the repository/release. Carbon Monitor <a href="https://doi.org/10.1038/s41597-020-00708-7">methods</a> provide interpretive context. Review by Prajwal Pratap Yadav.</footer>
-</main>
-<script id="report-data" type="application/json">__REPORT_DATA__</script>
-<script>
-  'use strict';
-  const data = JSON.parse(document.getElementById('report-data').textContent);
-  const colors = ['#a78bfa','#38bdf8','#34d399','#fbbf24','#fb7185','#cbd5e1'];
-  const byId = id => document.getElementById(id);
-  const number = (value,digits=2) => new Intl.NumberFormat('en-GB',{maximumFractionDigits:digits,minimumFractionDigits:digits}).format(Number(value));
-  const text = (id,value) => { byId(id).textContent=value; };
-  const geo = byId('geography'), year = byId('year');
-  for (const label of data.geography_order) { const option=document.createElement('option'); option.value=label; option.textContent=label+' · '+data.views[label].scope.replaceAll('_',' '); geo.append(option); }
-  for (const value of [2019,2020,2021,2022,2023]) { const option=document.createElement('option'); option.value=String(value); option.textContent=value===2023?'2023 · Jan–May YTD':String(value)+' · complete year'; year.append(option); }
-  geo.value='WORLD'; year.value='2022';
-  const svgNode = (tag,attrs,value) => { const node=document.createElementNS('http://www.w3.org/2000/svg',tag); for(const [k,v] of Object.entries(attrs)) node.setAttribute(k,String(v)); if(value!==undefined) node.textContent=value; return node; };
-  for(let i=0;i<data.sectors.length;i++) { const item=document.createElement('span'),dot=document.createElement('span'); dot.className='dot'; dot.style.background=colors[i];item.append(dot,document.createTextNode(data.sectors[i]));byId('legend').append(item); }
-  function render() {
-    const view=data.views[geo.value], selected=view.periods[year.value], months=selected.months;
-    text('selection-note',geo.value+' · '+view.scope.replaceAll('_',' ')+' · '+selected.first_day+' to '+selected.last_day);
-    text('total',number(selected.total)+' Mt'); text('period',selected.complete?'Complete calendar year':'Jan–May year to date · not annualised');
-    text('change-label',selected.complete?'Complete-year YoY':'Calendar-matched YTD YoY');
-    text('change',selected.change===null?'Unavailable':(Number(selected.change)>0?'+':'')+number(selected.change)+'%');
-    text('change-note',selected.change===null?'No previous source period':selected.complete?'Compared with previous complete year':'Compared with Jan–May of previous year');
-    text('cagr',view.cagr===null?'Unavailable':number(Number(view.cagr)*100)+'%'); text('days',String(selected.days));
-    const shares=byId('shares'); shares.replaceChildren();
-    for(let i=0;i<data.sectors.length;i++) { const row=document.createElement('div');row.className='share-row';const name=document.createElement('span'),value=document.createElement('span'),track=document.createElement('div'),fill=document.createElement('div');name.textContent=data.sectors[i];value.textContent=number(selected.shares[i])+'%';track.className='track';fill.className='fill';fill.style.width=Number(selected.shares[i])+'%';fill.style.background=colors[i];track.append(fill);row.append(name,value,track);shares.append(row); }
-    const chart=byId('chart');chart.replaceChildren(svgNode('title',{id:'chart-title'},'Monthly six-sector CO2 totals for '+geo.value+' in '+year.value+'. Numeric table follows.'));
-    const left=72,top=32,width=900,height=290,max=Math.max(...months.map(m=>Number(m.total)))*1.1||1;
-    for(let i=0;i<=4;i++) { const value=max*i/4,y=top+height-height*i/4;chart.append(svgNode('line',{x1:left,x2:left+width,y1:y,y2:y,stroke:'#314056'}),svgNode('text',{x:left-12,y:y+5,'text-anchor':'end',fill:'#aec0d7','font-size':15},number(value,0))); }
-    chart.append(svgNode('text',{x:left,y:17,fill:'#aec0d7','font-size':15},'Mt CO2 per month'));
-    const step=width/months.length,barWidth=step*.65;
-    months.forEach((month,index)=>{ let bottom=top+height;
-      month.sectors.forEach((value,sector)=>{ const h=Number(value)/max*height,rect=svgNode('rect',{x:left+index*step+(step-barWidth)/2,y:bottom-h,width:barWidth,height:h,fill:colors[sector]});rect.append(svgNode('title',{},data.sectors[sector]+', '+month.month+': '+number(value)+' Mt CO2'));chart.append(rect);bottom-=h; });
-      chart.append(svgNode('text',{x:left+index*step+step/2,y:top+height+28,'text-anchor':'middle',fill:'#aec0d7','font-size':15},month.label));
-    });
-    const table=byId('monthly-table'),thead=table.querySelector('thead'),tbody=table.querySelector('tbody');thead.replaceChildren();tbody.replaceChildren();const head=document.createElement('tr');for(const label of ['Month',...data.sectors,'Total']) {const cell=document.createElement('th');cell.scope='col';cell.textContent=label;head.append(cell);}thead.append(head);
-    for(const month of months) {const row=document.createElement('tr');for(const value of [month.month,...month.sectors.map(v=>number(v)),number(month.total)]) {const cell=document.createElement('td');cell.textContent=value;row.append(cell);}tbody.append(row);}
-  }
-  text('overlap',number(data.profile.all_labels_sum_divided_by_world,3)+'×');
-  text('rows',number(data.profile.retained_rows,0)+' original rows retained');
-  text('checks',number(data.profile.spatial_passes,0)+' / '+number(data.profile.spatial_checks,0)+' spatial checks pass');
-  text('residual','Max absolute gap: '+data.profile.maximum_absolute_spatial_residual_mt_co2+' Mt');
-  geo.addEventListener('change',render);year.addEventListener('change',render);render();
-</script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Carbon Accounting Review</title>
+        <style>
+            :root {
+                color-scheme: dark;
+                --bg: #0b1220;
+                --panel: #111c2e;
+                --line: #29394f;
+                --text: #e8eff8;
+                --muted: #aec0d7;
+                --blue: #38bdf8;
+                --gold: #fbbf24;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background: var(--bg);
+                color: var(--text);
+                font:
+                    16px/1.5 system-ui,
+                    sans-serif;
+            }
+            main {
+                max-width: 1280px;
+                padding: 36px 28px;
+                margin: auto;
+            }
+            a {
+                color: #7dd3fc;
+            }
+            a:focus-visible,
+            select:focus-visible,
+            summary:focus-visible {
+                outline: 3px solid var(--gold);
+                outline-offset: 4px;
+            }
+            .eyebrow {
+                color: var(--blue);
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 700;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                gap: 24px;
+                align-items: flex-start;
+            }
+            h1 {
+                font-size: clamp(30px, 4vw, 48px);
+                line-height: 1.15;
+                margin: 10px 0;
+                letter-spacing: -0.03em;
+            }
+            h2 {
+                font-size: 19px;
+                margin: 0 0 5px;
+            }
+            p {
+                margin: 8px 0;
+            }
+            .muted {
+                color: var(--muted);
+            }
+            .small {
+                font-size: 13px;
+            }
+            .tag {
+                border: 1px solid var(--line);
+                padding: 8px 12px;
+                border-radius: 30px;
+                white-space: nowrap;
+                color: var(--muted);
+                font-size: 13px;
+            }
+            .controls {
+                display: flex;
+                gap: 18px;
+                flex-wrap: wrap;
+                padding: 24px 0;
+            }
+            label {
+                display: block;
+                font-size: 13px;
+                color: var(--muted);
+                margin-bottom: 6px;
+            }
+            select {
+                background: #15243a;
+                border: 1px solid #53647e;
+                border-radius: 8px;
+                color: var(--text);
+                font: inherit;
+                padding: 10px 14px;
+                min-width: 180px;
+            }
+            .kpis {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 14px;
+                margin-bottom: 22px;
+            }
+            .card,
+            .panel {
+                background: var(--panel);
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: 22px;
+            }
+            .metric {
+                font-size: 30px;
+                font-weight: 720;
+                letter-spacing: -0.03em;
+                margin: 8px 0;
+            }
+            .metric sup {
+                font-size: 14px;
+                color: var(--muted);
+                margin-left: 5px;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 18px;
+                align-items: start;
+            }
+            .span {
+                grid-column: 1/-1;
+            }
+            .legend {
+                display: flex;
+                gap: 12px 18px;
+                flex-wrap: wrap;
+                margin-top: 14px;
+                color: var(--muted);
+                font-size: 12px;
+            }
+            .dot {
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                border-radius: 2px;
+                margin-right: 6px;
+            }
+            #chart {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin-top: 12px;
+            }
+            .share-row {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 5px;
+                padding: 9px 0;
+                font-size: 13px;
+            }
+            .track {
+                height: 6px;
+                background: #26364e;
+                grid-column: 1/-1;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+            .fill {
+                height: 100%;
+                border-radius: 4px;
+            }
+            .audit {
+                display: grid;
+                grid-template-columns: 170px 1fr;
+                gap: 24px;
+                background: #162034;
+                border-color: #a77922;
+            }
+            .audit .metric {
+                color: var(--gold);
+                font-size: 44px;
+            }
+            .audit h2 {
+                color: #fde68a;
+            }
+            .checks {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px 30px;
+                padding-top: 12px;
+                color: var(--muted);
+                font-size: 13px;
+            }
+            .note {
+                border-left: 3px solid #38bdf8;
+                padding-left: 14px;
+            }
+            details {
+                margin-top: 18px;
+            }
+            summary {
+                cursor: pointer;
+                color: #7dd3fc;
+            }
+            .scroll {
+                overflow: auto;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 14px;
+                font-size: 12px;
+            }
+            th,
+            td {
+                text-align: right;
+                border-bottom: 1px solid var(--line);
+                padding: 10px 8px;
+                white-space: nowrap;
+            }
+            th:first-child,
+            td:first-child {
+                text-align: left;
+            }
+            caption {
+                text-align: left;
+                color: var(--muted);
+                padding: 8px 0;
+            }
+            footer {
+                padding-top: 26px;
+                color: var(--muted);
+                font-size: 12px;
+            }
+            .status {
+                margin-left: auto;
+                align-self: end;
+                max-width: 450px;
+                color: var(--muted);
+                font-size: 13px;
+            }
+            @media (max-width: 900px) {
+                .kpis {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+                header {
+                    display: block;
+                }
+                .tag {
+                    display: inline-block;
+                    margin-top: 10px;
+                }
+                .status {
+                    margin-left: 0;
+                }
+            }
+            @media (max-width: 520px) {
+                main {
+                    padding: 24px 16px;
+                }
+                .card,
+                .panel {
+                    padding: 16px;
+                }
+                .metric {
+                    font-size: 25px;
+                }
+                .audit {
+                    grid-template-columns: 1fr;
+                    gap: 4px;
+                }
+                .audit .metric {
+                    margin: 0;
+                }
+                .controls > div {
+                    width: 100%;
+                }
+                select {
+                    width: 100%;
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    scroll-behavior: auto !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <div>
+                    <div class="eyebrow">Data review / carbon accounting</div>
+                    <h1>Carbon totals you can trace.</h1>
+                    <p class="muted">
+                        Read the geography correctly. Compare the same calendar
+                        window.
+                    </p>
+                </div>
+                <div class="tag">Archived snapshot · 2019–31 May 2023</div>
+            </header>
+            <section class="controls" aria-label="Report filters">
+                <div>
+                    <label for="geography">One source geography</label
+                    ><select id="geography"></select>
+                </div>
+                <div>
+                    <label for="year">Calendar period</label
+                    ><select id="year"></select>
+                </div>
+                <p id="selection-note" class="status" aria-live="polite"></p>
+            </section>
+            <section class="kpis" aria-label="Selected period metrics">
+                <article class="card">
+                    <div class="muted small">Six-sector sum</div>
+                    <div id="total" class="metric"></div>
+                    <div id="period" class="muted small"></div>
+                </article>
+                <article class="card">
+                    <div id="change-label" class="muted small">
+                        Comparable change
+                    </div>
+                    <div id="change" class="metric"></div>
+                    <div id="change-note" class="muted small"></div>
+                </article>
+                <article class="card">
+                    <div class="muted small">Complete-year CAGR</div>
+                    <div id="cagr" class="metric"></div>
+                    <div class="muted small">2019–2022 · excludes 2023 YTD</div>
+                </article>
+                <article class="card">
+                    <div class="muted small">Observed calendar days</div>
+                    <div id="days" class="metric"></div>
+                    <div class="muted small">
+                        All six source sectors present
+                    </div>
+                </article>
+            </section>
+            <div class="grid">
+                <section class="panel">
+                    <h2>Monthly sector totals</h2>
+                    <p class="muted small">
+                        Interpreted Mt CO₂, summed across observed days; partial
+                        years use the available months.
+                    </p>
+                    <svg
+                        id="chart"
+                        viewBox="0 0 1000 390"
+                        role="img"
+                        aria-labelledby="chart-title"
+                    >
+                        <title id="chart-title"></title>
+                    </svg>
+                    <div id="legend" class="legend"></div>
+                    <details>
+                        <summary>Inspect the monthly figures</summary>
+                        <div class="scroll">
+                            <table id="monthly-table">
+                                <caption>
+                                    Monthly sector totals, interpreted Mt CO₂.
+                                    Exact decimal audit exports accompany this
+                                    report.
+                                </caption>
+                                <thead></thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </details>
+                </section>
+                <section class="panel">
+                    <h2>Share of the selected total</h2>
+                    <p class="muted small">
+                        Denominator: the same geography, same dates and all six
+                        source sectors.
+                    </p>
+                    <div id="shares"></div>
+                    <p class="muted small note">
+                        These are activity-based CO₂ estimates. The snapshot
+                        supplies no population data, so per-capita comparisons
+                        are omitted.
+                    </p>
+                </section>
+                <section class="panel audit span">
+                    <div>
+                        <div class="eyebrow">Reporting trap</div>
+                        <div id="overlap" class="metric"></div>
+                        <div class="muted small">all-label sum / WORLD</div>
+                    </div>
+                    <div>
+                        <h2>Fourteen labels are not fourteen countries.</h2>
+                        <p>
+                            WORLD overlaps every region. France, Germany, Italy,
+                            Spain and UK also overlap EU27 &amp; UK. Summing all
+                            labels inflates the total.
+                        </p>
+                        <p class="muted small">
+                            This ratio covers the whole fixed snapshot. The safe
+                            reconstruction uses Brazil, China, EU27 &amp; UK,
+                            India, Japan, Russia, US and ROW exactly once, and
+                            checks them against WORLD for each day and sector.
+                        </p>
+                        <div class="checks">
+                            <span id="rows"></span><span id="checks"></span
+                            ><span id="residual"></span>
+                        </div>
+                    </div>
+                </section>
+                <section class="panel span">
+                    <h2>Scope before interpretation</h2>
+                    <p class="muted small">
+                        Source units are interpreted as Mt CO₂ from the
+                        preserved model's mega-ton label, the CO₂ dataset title
+                        and Carbon Monitor's public display; the uploader
+                        supplies no unit metadata. Six-sector totals are derived
+                        here, with no independent all-sector inventory total in
+                        the CSV. This is CO₂, with no GWP conversion or CO₂e
+                        claim. Land use lies outside the referenced
+                        fossil-fuel/cement scope; separate shipping treatment
+                        and international aviation allocation remain unverified.
+                    </p>
+                    <p class="muted small">
+                        The matching Kaggle v1 download is verified. Original
+                        Carbon Monitor release lineage remains unverified, and
+                        its current data has revisions and different geography
+                        coverage. Reconciliation tests arithmetic and overlap
+                        handling; it does not certify emission estimates.
+                    </p>
+                </section>
+            </div>
+            <footer>
+                <strong>Python re-creation, not a Power BI export.</strong> The
+                preserved PBIX has no verified refresh/render in this
+                environment.<br />Data: Saloni Jhalani,
+                <a
+                    href="https://www.kaggle.com/datasets/saloni1712/co2-emissions"
+                    >CO₂ Emissions by Sectors, Kaggle v1</a
+                >
+                · database
+                <a href="https://opendatacommons.org/licenses/odbl/1-0/"
+                    >ODbL 1.0</a
+                >, contents
+                <a href="https://opendatacommons.org/licenses/dbcl/1-0/"
+                    >DbCL 1.0</a
+                >. Normalized/aggregated database and transformation code are
+                included in the repository/release. Carbon Monitor
+                <a href="https://doi.org/10.1038/s41597-020-00708-7">methods</a>
+                provide interpretive context. Review by Prajwal Pratap Yadav.
+            </footer>
+        </main>
+        <script id="report-data" type="application/json">
+            __REPORT_DATA__
+        </script>
+        <script>
+            "use strict";
+            const data = JSON.parse(
+                document.getElementById("report-data").textContent,
+            );
+            const colors = [
+                "#a78bfa",
+                "#38bdf8",
+                "#34d399",
+                "#fbbf24",
+                "#fb7185",
+                "#cbd5e1",
+            ];
+            const byId = (id) => document.getElementById(id);
+            const number = (value, digits = 2) =>
+                new Intl.NumberFormat("en-GB", {
+                    maximumFractionDigits: digits,
+                    minimumFractionDigits: digits,
+                }).format(Number(value));
+            const text = (id, value) => {
+                byId(id).textContent = value;
+            };
+            const geo = byId("geography"),
+                year = byId("year");
+            for (const label of data.geography_order) {
+                const option = document.createElement("option");
+                option.value = label;
+                option.textContent =
+                    label +
+                    " · " +
+                    data.views[label].scope.replaceAll("_", " ");
+                geo.append(option);
+            }
+            for (const value of [2019, 2020, 2021, 2022, 2023]) {
+                const option = document.createElement("option");
+                option.value = String(value);
+                option.textContent =
+                    value === 2023
+                        ? "2023 · Jan–May YTD"
+                        : String(value) + " · complete year";
+                year.append(option);
+            }
+            geo.value = "WORLD";
+            year.value = "2022";
+            const svgNode = (tag, attrs, value) => {
+                const node = document.createElementNS(
+                    "http://www.w3.org/2000/svg",
+                    tag,
+                );
+                for (const [k, v] of Object.entries(attrs))
+                    node.setAttribute(k, String(v));
+                if (value !== undefined) node.textContent = value;
+                return node;
+            };
+            for (let i = 0; i < data.sectors.length; i++) {
+                const item = document.createElement("span"),
+                    dot = document.createElement("span");
+                dot.className = "dot";
+                dot.style.background = colors[i];
+                item.append(dot, document.createTextNode(data.sectors[i]));
+                byId("legend").append(item);
+            }
+            function render() {
+                const view = data.views[geo.value],
+                    selected = view.periods[year.value],
+                    months = selected.months;
+                text(
+                    "selection-note",
+                    geo.value +
+                        " · " +
+                        view.scope.replaceAll("_", " ") +
+                        " · " +
+                        selected.first_day +
+                        " to " +
+                        selected.last_day,
+                );
+                text("total", number(selected.total) + " Mt");
+                text(
+                    "period",
+                    selected.complete
+                        ? "Complete calendar year"
+                        : "Jan–May year to date · not annualised",
+                );
+                text(
+                    "change-label",
+                    selected.complete
+                        ? "Complete-year YoY"
+                        : "Calendar-matched YTD YoY",
+                );
+                text(
+                    "change",
+                    selected.change === null
+                        ? "Unavailable"
+                        : (Number(selected.change) > 0 ? "+" : "") +
+                              number(selected.change) +
+                              "%",
+                );
+                text(
+                    "change-note",
+                    selected.change === null
+                        ? "No previous source period"
+                        : selected.complete
+                          ? "Compared with previous complete year"
+                          : "Compared with Jan–May of previous year",
+                );
+                text(
+                    "cagr",
+                    view.cagr === null
+                        ? "Unavailable"
+                        : number(Number(view.cagr) * 100) + "%",
+                );
+                text("days", String(selected.days));
+                const shares = byId("shares");
+                shares.replaceChildren();
+                for (let i = 0; i < data.sectors.length; i++) {
+                    const row = document.createElement("div");
+                    row.className = "share-row";
+                    const name = document.createElement("span"),
+                        value = document.createElement("span"),
+                        track = document.createElement("div"),
+                        fill = document.createElement("div");
+                    name.textContent = data.sectors[i];
+                    value.textContent = number(selected.shares[i]) + "%";
+                    track.className = "track";
+                    fill.className = "fill";
+                    fill.style.width = Number(selected.shares[i]) + "%";
+                    fill.style.background = colors[i];
+                    track.append(fill);
+                    row.append(name, value, track);
+                    shares.append(row);
+                }
+                const chart = byId("chart");
+                chart.replaceChildren(
+                    svgNode(
+                        "title",
+                        { id: "chart-title" },
+                        "Monthly six-sector CO2 totals for " +
+                            geo.value +
+                            " in " +
+                            year.value +
+                            ". Numeric table follows.",
+                    ),
+                );
+                const left = 72,
+                    top = 32,
+                    width = 900,
+                    height = 290,
+                    max =
+                        Math.max(...months.map((m) => Number(m.total))) * 1.1 ||
+                        1;
+                for (let i = 0; i <= 4; i++) {
+                    const value = (max * i) / 4,
+                        y = top + height - (height * i) / 4;
+                    chart.append(
+                        svgNode("line", {
+                            x1: left,
+                            x2: left + width,
+                            y1: y,
+                            y2: y,
+                            stroke: "#314056",
+                        }),
+                        svgNode(
+                            "text",
+                            {
+                                x: left - 12,
+                                y: y + 5,
+                                "text-anchor": "end",
+                                fill: "#aec0d7",
+                                "font-size": 15,
+                            },
+                            number(value, 0),
+                        ),
+                    );
+                }
+                chart.append(
+                    svgNode(
+                        "text",
+                        { x: left, y: 17, fill: "#aec0d7", "font-size": 15 },
+                        "Mt CO2 per month",
+                    ),
+                );
+                const step = width / months.length,
+                    barWidth = step * 0.65;
+                months.forEach((month, index) => {
+                    let bottom = top + height;
+                    month.sectors.forEach((value, sector) => {
+                        const h = (Number(value) / max) * height,
+                            rect = svgNode("rect", {
+                                x: left + index * step + (step - barWidth) / 2,
+                                y: bottom - h,
+                                width: barWidth,
+                                height: h,
+                                fill: colors[sector],
+                            });
+                        rect.append(
+                            svgNode(
+                                "title",
+                                {},
+                                data.sectors[sector] +
+                                    ", " +
+                                    month.month +
+                                    ": " +
+                                    number(value) +
+                                    " Mt CO2",
+                            ),
+                        );
+                        chart.append(rect);
+                        bottom -= h;
+                    });
+                    chart.append(
+                        svgNode(
+                            "text",
+                            {
+                                x: left + index * step + step / 2,
+                                y: top + height + 28,
+                                "text-anchor": "middle",
+                                fill: "#aec0d7",
+                                "font-size": 15,
+                            },
+                            month.label,
+                        ),
+                    );
+                });
+                const table = byId("monthly-table"),
+                    thead = table.querySelector("thead"),
+                    tbody = table.querySelector("tbody");
+                thead.replaceChildren();
+                tbody.replaceChildren();
+                const head = document.createElement("tr");
+                for (const label of ["Month", ...data.sectors, "Total"]) {
+                    const cell = document.createElement("th");
+                    cell.scope = "col";
+                    cell.textContent = label;
+                    head.append(cell);
+                }
+                thead.append(head);
+                for (const month of months) {
+                    const row = document.createElement("tr");
+                    for (const value of [
+                        month.month,
+                        ...month.sectors.map((v) => number(v)),
+                        number(month.total),
+                    ]) {
+                        const cell = document.createElement("td");
+                        cell.textContent = value;
+                        row.append(cell);
+                    }
+                    tbody.append(row);
+                }
+            }
+            text(
+                "overlap",
+                number(data.profile.all_labels_sum_divided_by_world, 3) + "×",
+            );
+            text(
+                "rows",
+                number(data.profile.retained_rows, 0) +
+                    " original rows retained",
+            );
+            text(
+                "checks",
+                number(data.profile.spatial_passes, 0) +
+                    " / " +
+                    number(data.profile.spatial_checks, 0) +
+                    " spatial checks pass",
+            );
+            text(
+                "residual",
+                "Max absolute gap: " +
+                    data.profile.maximum_absolute_spatial_residual_mt_co2 +
+                    " Mt",
+            );
+            geo.addEventListener("change", render);
+            year.addEventListener("change", render);
+            render();
+        </script>
+    </body>
 </html>

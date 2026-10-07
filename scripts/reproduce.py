@@ -181,7 +181,7 @@ Sector shares use the same geography/date denominator in `sector-shares`. No pop
     ]
     manifest = {
         "source_git_sha": sha,
-        "dirty_tracked_files_at_start": dirty,
+        "dirty_worktree_files_at_start": dirty,
         "generated_at_utc": datetime.now(UTC).isoformat(),
         "python": platform.python_version(),
         "platform": platform.platform(),
