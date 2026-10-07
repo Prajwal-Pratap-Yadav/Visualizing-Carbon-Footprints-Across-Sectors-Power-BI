@@ -1,0 +1,1012 @@
+{
+  "cached_geography_summary": [
+    {
+      "Rank": 1,
+      "country": "WORLD",
+      "sum of Carbon_Emission": 155539.6221239995
+    },
+    {
+      "Rank": 2,
+      "country": "China",
+      "sum of Carbon_Emission": 48003.07138079994
+    },
+    {
+      "Rank": 3,
+      "country": "ROW",
+      "sum of Carbon_Emission": 46392.61847650004
+    },
+    {
+      "Rank": 4,
+      "country": "US",
+      "sum of Carbon_Emission": 21631.820344499978
+    },
+    {
+      "Rank": 5,
+      "country": "EU27 & UK",
+      "sum of Carbon_Emission": 14004.10283483998
+    },
+    {
+      "Rank": 6,
+      "country": "India",
+      "sum of Carbon_Emission": 11107.959324804544
+    },
+    {
+      "Rank": 7,
+      "country": "Russia",
+      "sum of Carbon_Emission": 7841.04690321998
+    },
+    {
+      "Rank": 8,
+      "country": "Japan",
+      "sum of Carbon_Emission": 4722.530409019984
+    },
+    {
+      "Rank": 9,
+      "country": "Germany",
+      "sum of Carbon_Emission": 2951.018675606011
+    },
+    {
+      "Rank": 10,
+      "country": "Brazil",
+      "sum of Carbon_Emission": 1836.4748318900042
+    },
+    {
+      "Rank": 11,
+      "country": "UK",
+      "sum of Carbon_Emission": 1605.2965868600027
+    },
+    {
+      "Rank": 12,
+      "country": "Italy",
+      "sum of Carbon_Emission": 1423.1048864769984
+    },
+    {
+      "Rank": 13,
+      "country": "France",
+      "sum of Carbon_Emission": 1328.4913326704082
+    },
+    {
+      "Rank": 14,
+      "country": "Spain",
+      "sum of Carbon_Emission": 1099.7325353519986
+    }
+  ],
+  "calculated_columns": [
+    {
+      "ColumnName": "Year",
+      "Expression": "YEAR([Date])",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Month",
+      "Expression": "FORMAT([Date], \"MMMM\")",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Quarter",
+      "Expression": "\"Qtr \" & [QuarterNo]",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Day",
+      "Expression": "DAY([Date])",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Year",
+      "Expression": "YEAR([Date])",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "MonthNo",
+      "Expression": "MONTH([Date])",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Month",
+      "Expression": "FORMAT([Date], \"MMMM\")",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "QuarterNo",
+      "Expression": "INT(([MonthNo] + 2) / 3)",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Quarter",
+      "Expression": "\"Qtr \" & [QuarterNo]",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Day",
+      "Expression": "DAY([Date])",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Rank",
+      "Expression": "RANKX(\n             summary_of_Carbon_Emissions_for_each_country,\n             summary_of_Carbon_Emissions_for_each_country[sum of carbon_Emission],\n             ,\n             DESC,\n             Dense)",
+      "TableName": "summary_of_Carbon_Emissions_for_each_country"
+    }
+  ],
+  "calculated_tables": [
+    {
+      "Expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "Expression": "Calendar(Date(Year(MIN('Datasets'[date])), 1, 1), Date(Year(MAX('Datasets'[date])), 12, 31))",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "Expression": "SUMMARIZE(\n                                                        'Datasets',\n                                                        'Datasets'[country],\n                                                        \"sum of Carbon_Emission\",\n                                                        SUMX('Datasets','Datasets'[value (In Mega Tons)])\n                                                        )",
+      "TableName": "summary_of_Carbon_Emissions_for_each_country"
+    }
+  ],
+  "connections": [],
+  "explicit_dax_measures": [],
+  "inspection_tool": "pbixray==0.15.5",
+  "ols": [],
+  "pages": [
+    {
+      "name": "Page 1",
+      "page_id": "3191575737031e970091",
+      "visuals": [
+        {
+          "select": [],
+          "type": "textbox",
+          "visual_id": "1cd8e11c0692477699db"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "country"
+                  }
+                },
+                "Function": 3
+              },
+              "Name": "Min(Datasets.country)",
+              "NativeReferenceName": "First country"
+            }
+          ],
+          "type": "card",
+          "visual_id": "cca8984706e3eee15a94"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "date"
+                  }
+                },
+                "Function": 3
+              },
+              "Name": "Min(Datasets.date)",
+              "NativeReferenceName": "Earliest date"
+            }
+          ],
+          "type": "card",
+          "visual_id": "915a6ebccfa0a3ffd8f3"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "Year"
+                  }
+                },
+                "Function": 3
+              },
+              "Name": "Min(Datasets.Year)",
+              "NativeReferenceName": "First Year"
+            }
+          ],
+          "type": "card",
+          "visual_id": "8c9c362343e875825b2e"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "sector"
+                  }
+                },
+                "Function": 2
+              },
+              "Name": "Min(Datasets.sector)",
+              "NativeReferenceName": "Count of sector"
+            }
+          ],
+          "type": "card",
+          "visual_id": "eed9d840df3fbb7e9e22"
+        },
+        {
+          "select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Average of value (In Mega Tons)"
+            }
+          ],
+          "type": "card",
+          "visual_id": "22f680da19e3c6cb80a4"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Sum of value (In Mega Tons)"
+            }
+          ],
+          "type": "columnChart",
+          "visual_id": "852201c4dd5a63845777"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "country"
+              },
+              "Name": "Datasets.country",
+              "NativeReferenceName": "country"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Sum of value (In Mega Tons)"
+            }
+          ],
+          "type": "treemap",
+          "visual_id": "b04b7a0d93c910428ef3"
+        },
+        {
+          "select": [],
+          "type": "actionButton",
+          "visual_id": "a43cdf6027f575404f2c"
+        }
+      ]
+    },
+    {
+      "name": "Page 2",
+      "page_id": "0488ab7ddbf730ea06e7",
+      "visuals": [
+        {
+          "select": [
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "date"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Month"
+              },
+              "Name": "Datasets.date.Variation.Date Hierarchy.Month",
+              "NativeReferenceName": "date Month"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "sector"
+                  }
+                },
+                "Function": 5
+              },
+              "Name": "CountNonNull(Datasets.sector)",
+              "NativeReferenceName": "Count of sector"
+            }
+          ],
+          "type": "lineChart",
+          "visual_id": "d3b1fa856e01b10b0a59"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Year"
+              },
+              "Name": "Datasets.Year",
+              "NativeReferenceName": "Year"
+            }
+          ],
+          "type": "slicer",
+          "visual_id": "9b3a1ed2d849b017e035"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Sum of value (In Mega Tons)"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "date"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Month"
+              },
+              "Name": "Datasets.date.Variation.Date Hierarchy.Month",
+              "NativeReferenceName": "date Month"
+            }
+          ],
+          "type": "lineChart",
+          "visual_id": "5b14f2fe8135cbb5e0c0"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Year"
+              },
+              "Name": "Datasets.Year",
+              "NativeReferenceName": "Year"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            }
+          ],
+          "type": "slicer",
+          "visual_id": "b976a1a3f48396b4ac57"
+        },
+        {
+          "select": [],
+          "type": "actionButton",
+          "visual_id": "76244ad7f068a6839a2d"
+        },
+        {
+          "select": [],
+          "type": "actionButton",
+          "visual_id": "c163943730c5432e8cff"
+        }
+      ]
+    },
+    {
+      "name": "Page 3",
+      "page_id": "cd136e5d91af36476608",
+      "visuals": [
+        {
+          "select": [
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "date"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Month"
+              },
+              "Name": "Datasets.date.Variation.Date Hierarchy.Month",
+              "NativeReferenceName": "date Month"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Sum of value (In Mega Tons)"
+            }
+          ],
+          "type": "stackedAreaChart",
+          "visual_id": "6e8b57e908a03517647e"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            }
+          ],
+          "type": "slicer",
+          "visual_id": "ad1e66d6447896d66558"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Sum of value (In Mega Tons)"
+            }
+          ],
+          "type": "pieChart",
+          "visual_id": "554f70239975c6d064a2"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 1
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Average of value (In Mega Tons)"
+            }
+          ],
+          "type": "donutChart",
+          "visual_id": "1fa0e783ffb0ba7d2ef8"
+        },
+        {
+          "select": [],
+          "type": "actionButton",
+          "visual_id": "58abc77865253020a718"
+        },
+        {
+          "select": [],
+          "type": "actionButton",
+          "visual_id": "273eccc6761b8206492a"
+        }
+      ]
+    },
+    {
+      "name": "Page 4",
+      "page_id": "3f04239d94268fce248c",
+      "visuals": [
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "country"
+              },
+              "Name": "Datasets.country",
+              "NativeReferenceName": "country"
+            },
+            {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "date"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Year"
+              },
+              "Name": "Datasets.date.Variation.Date Hierarchy.Year",
+              "NativeReferenceName": "date Year"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Sum of value (In Mega Tons)"
+            }
+          ],
+          "type": "pivotTable",
+          "visual_id": "e85c08f8881c6036f0cb"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "country"
+              },
+              "Name": "Datasets.country",
+              "NativeReferenceName": "country"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "Year"
+              },
+              "Name": "Datasets.Year",
+              "NativeReferenceName": "Year"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "d"
+                  }
+                },
+                "Property": "sector"
+              },
+              "Name": "Datasets.sector",
+              "NativeReferenceName": "sector"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "d"
+                      }
+                    },
+                    "Property": "value (In Mega Tons)"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(Datasets.value (In Mega Tons))",
+              "NativeReferenceName": "Sum of value (In Mega Tons)"
+            }
+          ],
+          "type": "tableEx",
+          "visual_id": "ddc2899c0424f05d7380"
+        },
+        {
+          "select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "country"
+              },
+              "Name": "summary_of_Carbon_Emissions_for_each_country.country",
+              "NativeReferenceName": "country"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Property": "sum of Carbon_Emission"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(summary_of_Carbon_Emissions_for_each_country.sum of Carbon_Emission)",
+              "NativeReferenceName": "Sum of sum of Carbon_Emission"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Property": "Rank"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(summary_of_Carbon_Emissions_for_each_country.Rank)",
+              "NativeReferenceName": "Sum of Rank"
+            }
+          ],
+          "type": "tableEx",
+          "visual_id": "973412b30bd133ea5458"
+        },
+        {
+          "select": [],
+          "type": "actionButton",
+          "visual_id": "26f0e69a46c7ac0adc5d"
+        }
+      ]
+    }
+  ],
+  "parameters": [],
+  "pbix_sha256": "bc6d19180e2d18666c5feb0db2a4361ea30ef367aa27daa6a1a32905c5512f0b",
+  "power_query_sanitized": [
+    {
+      "Expression": "let\n    Source = Csv.Document(File.Contents(\"<LOCAL_SOURCE_PATH_REDACTED>\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"country\", type text}, {\"date\", type date}, {\"sector\", type text}, {\"value\", type number}, {\"timestamp\", Int64.Type}}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"value\", \"value (In Mega Tons)\"}}),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"timestamp\"}),\n    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns\", \"Year\", each Date.Year([date]))\nin\n    #\"Added Custom\"",
+      "TableName": "Datasets"
+    }
+  ],
+  "relationships": [],
+  "rls": [],
+  "schema": [
+    {
+      "ColumnName": "country",
+      "PandasDataType": "string",
+      "TableName": "Datasets"
+    },
+    {
+      "ColumnName": "date",
+      "PandasDataType": "datetime64[ns]",
+      "TableName": "Datasets"
+    },
+    {
+      "ColumnName": "sector",
+      "PandasDataType": "string",
+      "TableName": "Datasets"
+    },
+    {
+      "ColumnName": "value (In Mega Tons)",
+      "PandasDataType": "Float64",
+      "TableName": "Datasets"
+    },
+    {
+      "ColumnName": "Year",
+      "PandasDataType": "string",
+      "TableName": "Datasets"
+    },
+    {
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Year",
+      "PandasDataType": "Int64",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Month",
+      "PandasDataType": "string",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Quarter",
+      "PandasDataType": "string",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Day",
+      "PandasDataType": "Int64",
+      "TableName": "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565"
+    },
+    {
+      "ColumnName": "Date",
+      "PandasDataType": "datetime64[ns]",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Year",
+      "PandasDataType": "Int64",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "MonthNo",
+      "PandasDataType": "Int64",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Month",
+      "PandasDataType": "string",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "QuarterNo",
+      "PandasDataType": "Int64",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Quarter",
+      "PandasDataType": "string",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "Day",
+      "PandasDataType": "Int64",
+      "TableName": "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd"
+    },
+    {
+      "ColumnName": "country",
+      "PandasDataType": "string",
+      "TableName": "summary_of_Carbon_Emissions_for_each_country"
+    },
+    {
+      "ColumnName": "sum of Carbon_Emission",
+      "PandasDataType": "Float64",
+      "TableName": "summary_of_Carbon_Emissions_for_each_country"
+    },
+    {
+      "ColumnName": "Rank",
+      "PandasDataType": "Int64",
+      "TableName": "summary_of_Carbon_Emissions_for_each_country"
+    }
+  ],
+  "tables": [
+    "Datasets",
+    "DateTableTemplate_e88317b7-fac8-42df-b3af-9019bd211565",
+    "LocalDateTable_9bd232dc-f6d3-40a3-8131-1bd325924dcd",
+    "summary_of_Carbon_Emissions_for_each_country"
+  ]
+}

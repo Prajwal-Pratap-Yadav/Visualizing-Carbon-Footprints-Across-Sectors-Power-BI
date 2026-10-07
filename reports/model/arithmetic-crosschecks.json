@@ -1,0 +1,30 @@
+{
+  "cached_dense_rank_matches_python": true,
+  "cached_rows": 135408,
+  "cached_year_date_disagreements": 0,
+  "identical_geography_date_sector_grain": true,
+  "independent_all_sector_reported_total_available": false,
+  "maximum_source_cache_value_difference": 1.1102230246251565e-16,
+  "maximum_source_cached_summary_difference": 4.94765117764473e-10,
+  "original_rank_warning": "WORLD, ROW, EU aggregate and countries share the ranking; not a country-only leaderboard.",
+  "pandas_world_2022_sector_shares_percent": {
+    "Domestic Aviation": 0.8667405865107151,
+    "Ground Transport": 17.90313237645737,
+    "Industry": 30.778019319073728,
+    "International Aviation": 1.3088213154248938,
+    "Power": 39.29246617841894,
+    "Residential": 9.850820224114344
+  },
+  "pandas_world_annual_mt_co2": {
+    "2019": 35344.364079,
+    "2020": 33453.825065,
+    "2021": 35507.981996,
+    "2022": 36119.462025,
+    "2023": 15113.988959
+  },
+  "pandas_world_complete_2019_2022_cagr_fraction": 0.007257168767901279,
+  "pandas_world_complete_2022_yoy_percent": 1.7220917512825284,
+  "pandas_world_latest_strict_7_day_mean_mt_co2": 92.60729042857143,
+  "scope": "Python/pandas computations and decoded cached tables; not validated against Power BI output or DAX engine evaluation.",
+  "source_rows": 135408
+}
