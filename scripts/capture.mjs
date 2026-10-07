@@ -1,5 +1,9 @@
 // Capture the real generated report; every screenshot records the exact source/view.
 import { chromium } from "@playwright/test";
+import { launchOptions } from "./browser-options.mjs";
+import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
+import { platform, arch } from "node:os";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { resolve } from "node:path";
@@ -11,8 +15,13 @@ const source = JSON.parse(
 const report = pathToFileURL(
     resolve(root, "docs/assets/carbon-report.html"),
 ).href;
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch(launchOptions);
 const captures = [];
+const browserVersion = browser.version();
+const captureSource = execFileSync("git", ["rev-parse", "HEAD"], {
+    cwd: root,
+    encoding: "utf8",
+}).trim();
 try {
     for (const view of [
         {
@@ -52,6 +61,9 @@ try {
             path: "docs/assets/" + view.name + ".png",
             total: await page.locator("#total").textContent(),
             period: await page.locator("#period").textContent(),
+            sha256: createHash("sha256")
+                .update(await readFile(path))
+                .digest("hex"),
         });
         await page.close();
     }
@@ -64,6 +76,18 @@ await writeFile(
     JSON.stringify(
         {
             source_git_sha: source.source_git_sha,
+            capture_source_git_sha: captureSource,
+            browser_version: browserVersion,
+            playwright_version: JSON.parse(
+                await readFile(
+                    resolve(root, "node_modules/playwright/package.json"),
+                    "utf8",
+                ),
+            ).version,
+            platform: platform() + "/" + arch(),
+            browser_provider: process.env.CARBON_CHROMIUM_EXECUTABLE
+                ? "reviewed local executable override"
+                : "Playwright pinned Chromium",
             report_sha256:
                 source.generated_sha256["docs/assets/carbon-report.html"],
             captures,

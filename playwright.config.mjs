@@ -1,4 +1,5 @@
 import { defineConfig } from "@playwright/test";
+import { launchOptions } from "./scripts/browser-options.mjs";
 
 export default defineConfig({
     testDir: "./tests",
@@ -10,5 +11,5 @@ export default defineConfig({
         ["json", { outputFile: "reports/local/browser-tests.json" }],
     ],
     outputDir: "reports/local/browser-output",
-    use: { headless: true },
+    use: { launchOptions },
 });

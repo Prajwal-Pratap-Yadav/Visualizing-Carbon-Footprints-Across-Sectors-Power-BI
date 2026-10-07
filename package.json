@@ -1,17 +1,17 @@
 {
-    "name": "carbon-accounting-review-browser-checks",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "test": "playwright test",
-        "capture": "node scripts/capture.mjs",
-        "format": "prettier --write scripts/report-template.html scripts/capture.mjs tests/report.spec.mjs playwright.config.mjs package.json",
-        "lint": "prettier --check scripts/report-template.html scripts/capture.mjs tests/report.spec.mjs playwright.config.mjs package.json"
-    },
-    "devDependencies": {
-        "@playwright/test": "1.63.0",
-        "@axe-core/playwright": "4.13.0",
-        "prettier": "3.9.9"
-    }
+  "name": "carbon-accounting-review-browser-checks",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "capture": "node scripts/capture.mjs",
+    "format": "prettier --write scripts/report-template.html scripts/capture.mjs scripts/browser-options.mjs tests/report.spec.mjs playwright.config.mjs package.json",
+    "lint": "prettier --check scripts/report-template.html scripts/capture.mjs scripts/browser-options.mjs tests/report.spec.mjs playwright.config.mjs package.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@axe-core/playwright": "4.13.0",
+    "prettier": "3.9.9"
+  }
 }
