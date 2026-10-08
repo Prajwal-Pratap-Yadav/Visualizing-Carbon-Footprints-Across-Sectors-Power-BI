@@ -1,0 +1,34 @@
+{
+  "source_git_sha": "f607ead031adca4673e8d71e26b311908ca7b273",
+  "workflow_run_id": "37652948498",
+  "workflow_run_url": "https://github.com/Prajwal-Pratap-Yadav/Visualizing-Carbon-Footprints-Across-Sectors-Power-BI/actions/runs/37652948498",
+  "python": "3.12.14",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "cpu_count": 4,
+  "versions": {
+    "pytest": "9.1.1",
+    "pytest-cov": "7.1.0",
+    "ruff": "0.16.10",
+    "black": "26.5.1",
+    "mypy": "2.4.0",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1"
+  },
+  "tests": {
+    "tests": 48,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit_suite_reported": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_count_method": "Executed testcase entries; suite counts also include unittest subtest pass events in the pinned pytest version.",
+  "coverage_percent": 98.2905982905983,
+  "coverage_scope": "src/carbon_audit; subprocess entry guard not covered; scripts/model/rendering excluded",
+  "source_data_sha256": "5ea4c7e923a7efe42994b6933a62bd801f19f9338c6c29ab0d0825288538158d",
+  "scope": "Real CPU audit/unit/end-to-end/reproduction run; no Power BI UI, refresh or DAX engine output validated."
+}

@@ -1,0 +1,27 @@
+{
+  "metadata_url": "https://www.kaggle.com/api/v1/datasets/view/saloni1712/co2-emissions",
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/saloni1712/co2-emissions",
+  "archive_sha256": "a697a81d8a666421bb5390daba55d26b4721767337008471a535d4c621670e7e",
+  "files": [
+    {
+      "name": "dataset.csv",
+      "bytes": 8283578,
+      "sha256": "5ea4c7e923a7efe42994b6933a62bd801f19f9338c6c29ab0d0825288538158d"
+    }
+  ],
+  "byte_matches_original": true,
+  "source_title": "CO2 Emissions by Sectors ",
+  "source_creator": "Saloni Jhalani",
+  "source_ref": "saloni1712/co2-emissions",
+  "source_version": 1,
+  "source_updated_utc": "2023-07-27T11:46:10.727Z",
+  "license": "Database: Open Database, Contents: Database Contents",
+  "verified_at_utc": "2026-10-07",
+  "source_url": "https://www.kaggle.com/datasets/saloni1712/co2-emissions",
+  "database_license": "ODbL-1.0",
+  "contents_license": "DbCL-1.0",
+  "database_license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "contents_license_url": "https://opendatacommons.org/licenses/dbcl/1-0/",
+  "upstream_carbon_monitor_original_release_lineage_verified": false,
+  "unit_interpretation": "Mt CO2 per daily sector observation, corroborated by original M mega-ton label, CO2 dataset title and Carbon Monitor display; uploader unit metadata absent."
+}

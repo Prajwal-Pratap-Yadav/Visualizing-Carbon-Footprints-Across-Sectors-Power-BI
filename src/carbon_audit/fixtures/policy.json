@@ -1,0 +1,29 @@
+{
+  "source_sha256": "c3b98d759f806bc4303323776d9b068614c029c593e60ebd515a4e3198bc47d1",
+  "first_day": "2019-01-01",
+  "last_day": "2019-01-02",
+  "geographies": [
+    "Brazil",
+    "China",
+    "EU27 & UK",
+    "India",
+    "Japan",
+    "Russia",
+    "US",
+    "ROW",
+    "WORLD"
+  ],
+  "absolute_tolerance": "0.000001",
+  "relative_tolerance": "0.00001",
+  "data_creator": "Repository synthetic fixture; invented records",
+  "data_license": "MIT",
+  "source_url": "https://github.com/Prajwal-Pratap-Yadav/Visualizing-Carbon-Footprints-Across-Sectors-Power-BI",
+  "synthetic": true,
+  "source_unit": "MtCO2",
+  "gas": "CO2",
+  "accounting_basis": "source_activity_estimate",
+  "unit_provenance": "Interpreted from original M mega-ton label, CO2 dataset title and Carbon Monitor display; uploader unit metadata absent.",
+  "lulucf": "outside_referenced_fossil_cement_scope",
+  "gwp_horizon": "not_applicable_CO2",
+  "shipping_treatment": "not_separately_present_unverified"
+}

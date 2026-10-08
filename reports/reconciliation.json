@@ -1,0 +1,127 @@
+{
+  "absolute_tolerance_mt_co2": "0.000001",
+  "accounting_basis": "source_activity_estimate; territorial-like interpretation, not consumption-based inventory",
+  "all_daily_sector_coverage_complete": true,
+  "all_labels_sum_divided_by_world": "2.054054692198218266001835435962242507833",
+  "all_sector_total_status": "derived sum of six sectors; no independent all-sector total in source",
+  "calendar_days": 1612,
+  "csv_sha256": {
+    "nonoverlapping_regions.csv": "f3414fd680f0b995b21c8e50692de6cf2879ecd9eb8a5ce24b448a9cd7e50b0f",
+    "normalized_all.csv": "b747954b94bc4d847956015e2b7610e28f267d06aa02a03e44898fa4a884e59a",
+    "spatial_residuals.csv": "6dbd8cab0429d650a53cfb805e9f68e6f55afd24b9ce5bd4b63aa5b4ad428596",
+    "world.csv": "db8715e9807e1f6a4fb24f2786c20a4e2c7dba691711371b8ba732ddda18068b"
+  },
+  "data_creator": "Saloni Jhalani (saloni1712)",
+  "data_license": "ODbL-1.0; contents DbCL-1.0",
+  "first_day": "2019-01-01",
+  "gas": "CO2; not CO2e",
+  "geographies": {
+    "Brazil": {
+      "key": "BRA",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "China": {
+      "key": "CHN",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "EU27 & UK": {
+      "key": "EU27_UK",
+      "rows": 9672,
+      "scope": "composite_region"
+    },
+    "France": {
+      "key": "FRA",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "Germany": {
+      "key": "DEU",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "India": {
+      "key": "IND",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "Italy": {
+      "key": "ITA",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "Japan": {
+      "key": "JPN",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "ROW": {
+      "key": "ROW",
+      "rows": 9672,
+      "scope": "residual_region"
+    },
+    "Russia": {
+      "key": "RUS",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "Spain": {
+      "key": "ESP",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "UK": {
+      "key": "GBR",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "US": {
+      "key": "USA",
+      "rows": 9672,
+      "scope": "country"
+    },
+    "WORLD": {
+      "key": "WORLD",
+      "rows": 9672,
+      "scope": "world"
+    }
+  },
+  "gwp_horizon": "not applicable to CO2-only data",
+  "international_aviation_allocation": "source convention not proven for original snapshot",
+  "last_day": "2023-05-31",
+  "lulucf": "outside referenced fossil-fuel/cement scope",
+  "maximum_absolute_spatial_residual_mt_co2": "0.000136",
+  "maximum_relative_spatial_residual": "0.000005734915301619122112773901741849300228551",
+  "partition": [
+    "Brazil",
+    "China",
+    "EU27 & UK",
+    "India",
+    "Japan",
+    "Russia",
+    "US",
+    "ROW"
+  ],
+  "population": "not supplied; no per-capita result computed",
+  "relative_tolerance": "0.00001",
+  "retained_rows": 135408,
+  "scientific_accuracy_or_primary_inventory_certified": false,
+  "sectors": [
+    "Domestic Aviation",
+    "Ground Transport",
+    "Industry",
+    "International Aviation",
+    "Power",
+    "Residential"
+  ],
+  "shipping": "no separately named sector; inclusion/allocation unverified",
+  "source_rows": 135408,
+  "source_sha256": "5ea4c7e923a7efe42994b6933a62bd801f19f9338c6c29ab0d0825288538158d",
+  "source_url": "https://www.kaggle.com/datasets/saloni1712/co2-emissions",
+  "spatial_checks": 9672,
+  "spatial_failures": 0,
+  "spatial_passes": 9672,
+  "synthetic": false,
+  "unit": "MtCO2 interpretation corroborated by original model and Carbon Monitor display; uploader metadata absent"
+}

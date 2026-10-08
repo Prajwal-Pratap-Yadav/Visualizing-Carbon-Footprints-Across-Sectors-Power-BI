@@ -1,0 +1,119 @@
+// Proposed companion model only. Not installed or evaluated in the preserved PBIX.
+// Prerequisites: audited normalized_all.csv, single-select geography_key, marked Calendar,
+// Calendar[Date] -> Emissions[date] one-to-many single-direction relationship.
+// Use Calendar fields for all date filters; do not filter Emissions[date] directly.
+
+Calendar = CALENDAR ( DATE ( 2019, 1, 1 ), DATE ( 2023, 12, 31 ) )
+// Calculated column on Calendar:
+Year = YEAR ( 'Calendar'[Date] )
+
+Scoped amount MtCO2 =
+IF (
+    HASONEVALUE ( Emissions[geography_key] ),
+    SUM ( Emissions[value_mt_co2] ),
+    BLANK ()
+)
+
+Six-sector sum MtCO2 =
+CALCULATE ( [Scoped amount MtCO2], REMOVEFILTERS ( Emissions[sector] ) )
+
+Snapshot last day =
+IF (
+    HASONEVALUE ( Emissions[geography_key] ),
+    CALCULATE (
+        MAX ( Emissions[date] ),
+        REMOVEFILTERS ( 'Calendar' ),
+        REMOVEFILTERS ( Emissions[sector] )
+    )
+)
+
+Sector share =
+DIVIDE ( [Scoped amount MtCO2], [Six-sector sum MtCO2] )
+
+Complete-year YoY =
+VAR Y = SELECTEDVALUE ( 'Calendar'[Year] )
+VAR LastObserved = [Snapshot last day]
+VAR CurrentValue =
+    CALCULATE (
+        [Six-sector sum MtCO2], REMOVEFILTERS ( 'Calendar' ),
+        DATESBETWEEN ( 'Calendar'[Date], DATE ( Y, 1, 1 ), DATE ( Y, 12, 31 ) )
+    )
+VAR PreviousValue =
+    CALCULATE (
+        [Six-sector sum MtCO2], REMOVEFILTERS ( 'Calendar' ),
+        DATESBETWEEN ( 'Calendar'[Date], DATE ( Y - 1, 1, 1 ), DATE ( Y - 1, 12, 31 ) )
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ) && Y > 2019 && DATE ( Y, 12, 31 ) <= LastObserved
+            && NOT ISBLANK ( PreviousValue ) && PreviousValue <> 0,
+        DIVIDE ( CurrentValue, PreviousValue ) - 1,
+        BLANK ()
+    )
+
+Calendar-matched YTD YoY =
+VAR Y = SELECTEDVALUE ( 'Calendar'[Year] )
+VAR LastObserved = [Snapshot last day]
+VAR M = MONTH ( LastObserved )
+VAR D = DAY ( LastObserved )
+VAR CurrentEnd = DATE ( Y, M, MIN ( D, DAY ( EOMONTH ( DATE ( Y, M, 1 ), 0 ) ) ) )
+VAR PreviousEnd = DATE ( Y - 1, M, MIN ( D, DAY ( EOMONTH ( DATE ( Y - 1, M, 1 ), 0 ) ) ) )
+VAR CurrentValue =
+    CALCULATE (
+        [Six-sector sum MtCO2], REMOVEFILTERS ( 'Calendar' ),
+        DATESBETWEEN ( 'Calendar'[Date], DATE ( Y, 1, 1 ), CurrentEnd )
+    )
+VAR PreviousValue =
+    CALCULATE (
+        [Six-sector sum MtCO2], REMOVEFILTERS ( 'Calendar' ),
+        DATESBETWEEN ( 'Calendar'[Date], DATE ( Y - 1, 1, 1 ), PreviousEnd )
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ) && NOT ISBLANK ( LastObserved )
+            && Y > 2019 && CurrentEnd <= LastObserved
+            && NOT ISBLANK ( PreviousValue ) && PreviousValue <> 0,
+        DIVIDE ( CurrentValue, PreviousValue ) - 1,
+        BLANK ()
+    )
+
+Strict seven-day mean MtCO2 =
+VAR EndDate = MAX ( 'Calendar'[Date] )
+VAR WindowDates =
+    CALCULATETABLE (
+        VALUES ( 'Calendar'[Date] ), REMOVEFILTERS ( 'Calendar' ),
+        DATESBETWEEN ( 'Calendar'[Date], EndDate - 6, EndDate )
+    )
+VAR DailyValues =
+    ADDCOLUMNS (
+        WindowDates,
+        "DailyAmount", VAR D = 'Calendar'[Date]
+            RETURN CALCULATE (
+                [Six-sector sum MtCO2], REMOVEFILTERS ( 'Calendar' ),
+                'Calendar'[Date] = D
+            )
+    )
+RETURN
+    IF (
+        COUNTROWS ( WindowDates ) = 7 && COUNTX ( DailyValues, [DailyAmount] ) = 7,
+        AVERAGEX ( DailyValues, [DailyAmount] ),
+        BLANK ()
+    )
+
+Complete 2019-2022 CAGR =
+VAR StartValue =
+    CALCULATE (
+        [Six-sector sum MtCO2], REMOVEFILTERS ( 'Calendar' ),
+        DATESBETWEEN ( 'Calendar'[Date], DATE ( 2019, 1, 1 ), DATE ( 2019, 12, 31 ) )
+    )
+VAR EndValue =
+    CALCULATE (
+        [Six-sector sum MtCO2], REMOVEFILTERS ( 'Calendar' ),
+        DATESBETWEEN ( 'Calendar'[Date], DATE ( 2022, 1, 1 ), DATE ( 2022, 12, 31 ) )
+    )
+RETURN
+    IF (
+        [Snapshot last day] >= DATE ( 2022, 12, 31 ) && StartValue > 0 && EndValue >= 0,
+        POWER ( DIVIDE ( EndValue, StartValue ), 1 / 3 ) - 1,
+        BLANK ()
+    )

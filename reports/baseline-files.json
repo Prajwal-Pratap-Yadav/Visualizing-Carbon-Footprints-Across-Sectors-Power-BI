@@ -1,0 +1,22 @@
+[
+  {
+    "path": "Datasets.csv",
+    "bytes": 8283578,
+    "sha256": "5ea4c7e923a7efe42994b6933a62bd801f19f9338c6c29ab0d0825288538158d"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 1077,
+    "sha256": "4aae2fc6f9d5f27cf556519461713d508e8d3f91bc2df951ebcbeb18670f0726"
+  },
+  {
+    "path": "README.md",
+    "bytes": 1389,
+    "sha256": "b3ea605bffc6682b49491d1d15965e0a2dc9f91bdd1c078a076b1017b0ae9cdb"
+  },
+  {
+    "path": "Visualizing Carbon Footprints.pbix",
+    "bytes": 1877799,
+    "sha256": "bc6d19180e2d18666c5feb0db2a4361ea30ef367aa27daa6a1a32905c5512f0b"
+  }
+]

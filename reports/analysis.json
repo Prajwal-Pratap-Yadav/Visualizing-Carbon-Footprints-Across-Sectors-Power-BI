@@ -1,0 +1,2480 @@
+{
+  "Brazil": {
+    "cagr_complete_years_fraction": "-0.0291539394445805861100457137989323176764",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "169.9461166",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "149.08159371",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "173.39737628",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "163.66046284",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "156.4692006",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "434.7050337",
+        "first_day": "2019-01-01",
+        "geography": "Brazil",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "2.318874965445333420347738660197621723560",
+          "Ground Transport": "39.37575752070247996302417788174786437951",
+          "Industry": "29.90946870188036656268422686084023599840",
+          "International Aviation": "1.521554315509643476208037293771967655961",
+          "Power": "18.44928854800146290553524823377263781613",
+          "Residential": "8.425055948460713672200571069669672426432"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "10.0802662",
+          "Ground Transport": "171.168400",
+          "Industry": "130.017966",
+          "International Aviation": "6.6142732",
+          "Power": "80.199986",
+          "Residential": "36.6241423"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "385.35474646",
+        "first_day": "2020-01-01",
+        "geography": "Brazil",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "1.576051470960776290421093987009820727563",
+          "Ground Transport": "37.63477043744001429471843957626907699981",
+          "Industry": "32.18919012662937993697496910805275046566",
+          "International Aviation": "0.7261518991801131894639956837240094234806",
+          "Power": "18.36982433726112926830251245064682367426",
+          "Residential": "9.504011728528587020118989194297518709224"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "6.07338915",
+          "Ground Transport": "145.0273742",
+          "Industry": "124.042572",
+          "International Aviation": "2.79826081",
+          "Power": "70.788990",
+          "Residential": "36.6241603"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-11.35259162286530476861142452420605590977"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "462.16324639",
+        "first_day": "2021-01-01",
+        "geography": "Brazil",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "1.871688490499397021945867070184788867066",
+          "Ground Transport": "35.13165632885193564645282307430262206749",
+          "Industry": "27.99944976386160874440018233229201633746",
+          "International Aviation": "0.6456961740920836705913376947101031462443",
+          "Power": "26.42700581537257883117060817909233485467",
+          "Residential": "7.924503427322396085439181649418134727068"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "8.65025629",
+          "Ground Transport": "162.3656034",
+          "Industry": "129.403166",
+          "International Aviation": "2.98417040",
+          "Power": "122.135908",
+          "Residential": "36.6241423"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "19.93189408865183334013007501285624621340"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "397.78260474",
+        "first_day": "2022-01-01",
+        "geography": "Brazil",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "2.732733048270199227415315959148043060803",
+          "Ground Transport": "42.56044683267564245675264517601439043762",
+          "Industry": "32.41254707059717263995308413847760355434",
+          "International Aviation": "1.254925600193806001271447152221692196866",
+          "Power": "11.83227256273911441228600166463880549228",
+          "Residential": "9.207074885524065262321505909499465258090"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "10.8703367",
+          "Ground Transport": "169.298054",
+          "Industry": "128.931474",
+          "International Aviation": "4.99187574",
+          "Power": "47.066722",
+          "Residential": "36.6241423"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "-13.93028159484406550582954502774648903859"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "156.4692006",
+        "first_day": "2023-01-01",
+        "geography": "Brazil",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "3.053701419626221315276535003911817774060",
+          "Ground Transport": "44.51392077988286213561699502924411310631",
+          "Industry": "31.92340972437996848818821152717003144196",
+          "International Aviation": "1.543359773514430545381082492729243227181",
+          "Power": "9.212860387042841452338831722771644300201",
+          "Residential": "9.752747915553676063198344224173150150292"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "4.7781022",
+          "Ground Transport": "69.650576",
+          "Industry": "49.950304",
+          "International Aviation": "2.4148827",
+          "Power": "14.415289",
+          "Residential": "15.2600467"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "China": {
+    "cagr_complete_years_fraction": "0.018222379463294630620125185473325446152",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4217.3901350",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "3987.2273325",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4652.3621188",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4440.8480308",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4612.5204869",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "10492.9980790",
+        "first_day": "2019-01-01",
+        "geography": "China",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5952398916854886045767282371004425302535",
+          "Ground Transport": "8.805825399408233323474336642923919856747",
+          "Industry": "39.08993377411253026495479262157215534548",
+          "International Aviation": "0.2996188349916879842783396358229715444514",
+          "Power": "43.54350487439939614230820445764421644282",
+          "Residential": "7.665877225402663680407598404936294280246"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "62.4585104",
+          "Ground Transport": "923.99509",
+          "Industry": "4101.70600",
+          "International Aviation": "31.4389986",
+          "Power": "4569.01913",
+          "Residential": "804.38035"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "10595.8749450",
+        "first_day": "2020-01-01",
+        "geography": "China",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4865328825377147748132469111544426593834",
+          "Ground Transport": "7.634557081873902769055377899233974018934",
+          "Industry": "40.18751865327908510909667026086253984191",
+          "International Aviation": "0.1203559712264988419981772444370803207889",
+          "Power": "43.94438745426322129927704615807920900297",
+          "Residential": "7.626647956819577205759481526232754156009"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "51.5524158",
+          "Ground Transport": "808.948121",
+          "Industry": "4258.21922",
+          "International Aviation": "12.7527682",
+          "Power": "4656.29234",
+          "Residential": "808.11008"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "0.980433477881703136448272669125302333900"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "11224.5413604",
+        "first_day": "2021-01-01",
+        "geography": "China",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5152987462281381358381617425537942249587",
+          "Ground Transport": "8.084820937108299953304878732138953827789",
+          "Industry": "38.94461367857814678038379478944220150161",
+          "International Aviation": "0.09796150369932045032085585542995029400720",
+          "Power": "45.24314835629976605631930190308214778040",
+          "Residential": "7.114156778086328623833006977352952371237"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "57.8399209",
+          "Ground Transport": "907.48407",
+          "Industry": "4371.35427",
+          "International Aviation": "10.9957295",
+          "Power": "5078.3359",
+          "Residential": "798.53147"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "5.933124151268472714123750919750025419000"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "11077.1365095",
+        "first_day": "2022-01-01",
+        "geography": "China",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.3127631357642609360496298937481284995804",
+          "Ground Transport": "7.899783840792433451774461947647084740479",
+          "Industry": "37.91954406626336430633476793301406953289",
+          "International Aviation": "0.08473868668089288928880830815403611506788",
+          "Power": "46.41444380134367612850442682359361963048",
+          "Residential": "7.368726469155372288047905093843061481502"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "34.6451995",
+          "Ground Transport": "875.06984",
+          "Industry": "4200.39966",
+          "International Aviation": "9.3866200",
+          "Power": "5141.3913",
+          "Residential": "816.24389"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "-1.313237184193929962615633144671645340360"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "4612.5204869",
+        "first_day": "2023-01-01",
+        "geography": "China",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5601075068040149283092824326421096378025",
+          "Ground Transport": "8.285244934637517306156466233732664746292",
+          "Industry": "37.08717381003335961573222513939876241767",
+          "International Aviation": "0.1024249846351397893451814990137989927808",
+          "Power": "45.63625041836342634803701905699605013065",
+          "Residential": "8.328798345526542012419825638216614074807"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "25.8350735",
+          "Ground Transport": "382.15862",
+          "Industry": "1710.65349",
+          "International Aviation": "4.7243734",
+          "Power": "2104.9814",
+          "Residential": "384.16753"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "EU27 & UK": {
+    "cagr_complete_years_fraction": "-0.0008644661595815478604004214893596039360",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1439.6631743",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "1213.37595023",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1370.9702150",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1407.1862501",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1361.6373560",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "3274.9411869",
+        "first_day": "2019-01-01",
+        "geography": "EU27 & UK",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5042855415560256759370019696154318135428",
+          "Ground Transport": "26.86662568230318041684890814550218388839",
+          "Industry": "19.31139824830421903537848843315360852107",
+          "International Aviation": "5.829020037477363712958713469346914212825",
+          "Power": "28.51165888825812550044606726247282886740",
+          "Residential": "18.97701160210108565843082071990903269677"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "16.5150549",
+          "Ground Transport": "879.86619",
+          "Industry": "632.436935",
+          "International Aviation": "190.896978",
+          "Power": "933.74006",
+          "Residential": "621.485969"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "2916.70086084",
+        "first_day": "2020-01-01",
+        "geography": "EU27 & UK",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.2946712244437971508217028445316019177206",
+          "Ground Transport": "28.46215637488850627112087687054011546071",
+          "Industry": "20.01886651591145762086632895170205547941",
+          "International Aviation": "2.695863801314021077532175272466224997489",
+          "Power": "27.64523543795231789115324393308927645607",
+          "Residential": "20.88320664548989998850567212767072568860"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "8.59467814",
+          "Ground Transport": "830.155960",
+          "Industry": "583.890452",
+          "International Aviation": "78.6302827",
+          "Power": "806.32882",
+          "Residential": "609.100668"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-10.93883235195144994070855202630264981385"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "3184.3681317",
+        "first_day": "2021-01-01",
+        "geography": "EU27 & UK",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.3537936643646005748023169114043548886456",
+          "Ground Transport": "27.79751188903659508382210456223301740060",
+          "Industry": "20.13716541176626422272268841648387860608",
+          "International Aviation": "3.098233995556601116829346643847396722143",
+          "Power": "27.93401903331828900176780399350207452649",
+          "Residential": "20.67927600595765000005573947252927785604"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "11.2660927",
+          "Ground Transport": "885.17511",
+          "Industry": "641.241478",
+          "International Aviation": "98.659176",
+          "Power": "889.52200",
+          "Residential": "658.504275"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "9.177055983139550681986214186919250979700"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "3266.4552994",
+        "first_day": "2022-01-01",
+        "geography": "EU27 & UK",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4457461396356618392363725606598147956887",
+          "Ground Transport": "27.09180040402055409801944403121379509425",
+          "Industry": "20.35841690906195781875146881429875415365",
+          "International Aviation": "4.993032356204543626763460126351055860403",
+          "Power": "28.47688900475268509042557877778255446100",
+          "Residential": "18.63411518632459752680367568969402563501"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "14.5600984",
+          "Ground Transport": "884.94155",
+          "Industry": "664.998588",
+          "International Aviation": "163.095170",
+          "Power": "930.18485",
+          "Residential": "608.675043"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "2.577816518223259544750078494826810918600"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "1361.6373560",
+        "first_day": "2023-01-01",
+        "geography": "EU27 & UK",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4339058394634701840539104598419962855367",
+          "Ground Transport": "27.53443186234088601194340323312927674995",
+          "Industry": "20.31777145221036371155492887344080768595",
+          "International Aviation": "4.898536435276824176671604182986295801949",
+          "Power": "22.81317405337107981047488241795857427989",
+          "Residential": "24.00218035733737610530127083264304919672"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "5.9082240",
+          "Ground Transport": "374.91911",
+          "Industry": "276.654366",
+          "International Aviation": "66.700302",
+          "Power": "310.63270",
+          "Residential": "326.822654"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "France": {
+    "cagr_complete_years_fraction": "-0.0025575377868058681430933023895392305003",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "137.93706206",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "113.1163355184",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "133.10028979",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "137.25631712",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "136.21182114",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "310.02729540",
+        "first_day": "2019-01-01",
+        "geography": "France",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.7505457533982022410017772906069095747109",
+          "Ground Transport": "37.61585083969351686961173290292168255325",
+          "Industry": "19.89073688509814997405547795518394216847",
+          "International Aviation": "6.487779978872144171857972477090480079065",
+          "Power": "9.492710621504844440867899143050744428099",
+          "Residential": "25.76237592143314230260514023114624119641"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "2.32689670",
+          "Ground Transport": "116.619405",
+          "Industry": "61.6667136",
+          "International Aviation": "20.1138888",
+          "Power": "29.429994",
+          "Residential": "79.8703973"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "272.8833551904",
+        "first_day": "2020-01-01",
+        "geography": "France",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4737930019578871434911018588117776772506",
+          "Ground Transport": "38.51283268144792729278894509140355905767",
+          "Industry": "20.05641636215319298110371025157563592730",
+          "International Aviation": "3.238096088284558450956527088058842000215",
+          "Power": "9.859357299835229488846515777129841415335",
+          "Residential": "27.85950456632120464281319993302034392223"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.2929022404",
+          "Ground Transport": "105.0951100",
+          "Industry": "54.7306219",
+          "International Aviation": "8.83622525",
+          "Power": "26.904545",
+          "Residential": "76.0239508"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-11.98086128567375167960775624016232991336"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "301.71420663",
+        "first_day": "2021-01-01",
+        "geography": "France",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5716169116673324478781107106265664279171",
+          "Ground Transport": "39.18257390676187928234315904940786844778",
+          "Industry": "19.26419801347887229250421988987267463760",
+          "International Aviation": "3.812662164134302766623422620767295753109",
+          "Power": "9.454245233795274136707296088916686488347",
+          "Residential": "27.71470377016233907394379164040890824525"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.72464943",
+          "Ground Transport": "118.219392",
+          "Industry": "58.1228222",
+          "International Aviation": "11.5033434",
+          "Power": "28.524801",
+          "Residential": "83.6191986"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "10.56526566799346708711509306462934054920"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "307.65465431",
+        "first_day": "2022-01-01",
+        "geography": "France",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.6296322135429617580291239638161676280606",
+          "Ground Transport": "38.61631453827752754598006653507727978048",
+          "Industry": "19.15131676851893747643138004441262957859",
+          "International Aviation": "5.810742125807951993469713226000439115541",
+          "Power": "11.14734443947115854052362507877965085351",
+          "Residential": "24.64464991438146268556609115191383304381"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.93709281",
+          "Ground Transport": "118.804889",
+          "Industry": "58.9199174",
+          "International Aviation": "17.8770186",
+          "Power": "34.295324",
+          "Residential": "75.8204125"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "1.968898894868721217033796656126652871800"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "136.21182114",
+        "first_day": "2023-01-01",
+        "geography": "France",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5311995199420472266361771073520499000649",
+          "Ground Transport": "36.61919764565303278346580074217485056672",
+          "Industry": "18.28397101775949429171548039989739762758",
+          "International Aviation": "5.478647328508950585197351690000317691957",
+          "Power": "8.675645697339363830783005710571766018163",
+          "Residential": "30.41133879079711128220218435000361819551"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "0.72355654",
+          "Ground Transport": "49.879676",
+          "Industry": "24.9049299",
+          "International Aviation": "7.4625653",
+          "Power": "11.817255",
+          "Residential": "41.4238384"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "Germany": {
+    "cagr_complete_years_fraction": "-0.0005680686672337060909736829593490285271",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "310.47118885",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "253.157754412",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "295.656562549",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "297.36092667",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "287.342916504",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "686.88589366",
+        "first_day": "2019-01-01",
+        "geography": "Germany",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.3092354755870704511797762342767282387285",
+          "Ground Transport": "21.90777163848504123901096449254456217944",
+          "Industry": "18.06041937169340470744294772274156240823",
+          "International Aviation": "4.191710466870035270713845802229718772996",
+          "Power": "35.40908151483903921172280374705984757637",
+          "Residential": "20.12178153252540911992966200114758082423"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "2.12409486",
+          "Ground Transport": "150.481393",
+          "Industry": "124.054473",
+          "International Aviation": "28.7922679",
+          "Power": "243.219986",
+          "Residential": "138.2136789"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "614.735021283",
+        "first_day": "2020-01-01",
+        "geography": "Germany",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.1657262637930944678464223459288851482273",
+          "Ground Transport": "24.26048977797586936702737319585905515797",
+          "Industry": "18.38438767716996277549136172369776966423",
+          "International Aviation": "2.131526274955430047294496495939276398650",
+          "Power": "33.23869796348148591380600632218235084222",
+          "Residential": "21.81917204262415742853433991639266278871"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.018777383",
+          "Ground Transport": "149.137727",
+          "Industry": "113.0152695",
+          "International Aviation": "13.1032385",
+          "Power": "204.329917",
+          "Residential": "134.1300919"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-10.50405504654515254294238260277974216915"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "676.338880709",
+        "first_day": "2021-01-01",
+        "geography": "Germany",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.1356160550815121214785225800884424842134",
+          "Ground Transport": "22.24026169282424582745798926764684237765",
+          "Industry": "17.51692390888499704260760093636966565653",
+          "International Aviation": "2.441641929958064619410512352680281727926",
+          "Power": "35.39998450909906433746462037601266417422",
+          "Residential": "22.26557190415211605158075448720210357946"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "0.917224109",
+          "Ground Transport": "150.419537",
+          "Industry": "118.4737671",
+          "International Aviation": "16.5137737",
+          "Power": "239.423859",
+          "Residential": "150.5907198"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "10.02120544514088918162534351788626629170"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "685.71596345",
+        "first_day": "2022-01-01",
+        "geography": "Germany",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.1680352669934623205686433112015951566221",
+          "Ground Transport": "21.81406689840129898758010312731913693645",
+          "Industry": "17.20774590201061768791755842562629493353",
+          "International Aviation": "3.496402107860246869392026839505831836997",
+          "Power": "37.66526299031284423279383404881121992786",
+          "Residential": "19.64848683442152990174783424753592120854"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.15224465",
+          "Ground Transport": "149.582539",
+          "Industry": "117.9962606",
+          "International Aviation": "23.9753874",
+          "Power": "258.276721",
+          "Residential": "134.7328108"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "1.386447387317152020584916273636811123400"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "287.342916504",
+        "first_day": "2023-01-01",
+        "geography": "Germany",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.1738691212849317742442426726848616409490",
+          "Ground Transport": "21.79420803614215131645826179513343581177",
+          "Industry": "17.26784241062343581508648833088479509004",
+          "International Aviation": "3.381013709403467912397228446556854956311",
+          "Power": "31.07004866735846542203021781576397109040",
+          "Residential": "26.31301805518754775978356093897608141053"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "0.499600604",
+          "Ground Transport": "62.624113",
+          "Industry": "49.617922",
+          "International Aviation": "9.7151034",
+          "Power": "89.277584",
+          "Residential": "75.6085935"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "India": {
+    "cagr_complete_years_fraction": "0.025110002664514610654225876970059627889",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1083.0124936",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "914.5293701846",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1068.04150278",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1154.68339367",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1221.4351654",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "2471.6864274",
+        "first_day": "2019-01-01",
+        "geography": "India",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.2911271033506181723510968371958298030180",
+          "Ground Transport": "12.12248109948091225255072984991542701870",
+          "Industry": "30.38914692710910825791266793926320849772",
+          "International Aviation": "0.4872716525238625421275799169766481196158",
+          "Power": "48.45436568018919405099938366073337123023",
+          "Residential": "8.255607537346304724058541795915515330713"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "7.1957491",
+          "Ground Transport": "299.629720",
+          "Industry": "751.12442",
+          "International Aviation": "12.0438273",
+          "Power": "1197.63998",
+          "Residential": "204.052731"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "2264.7539115846",
+        "first_day": "2020-01-01",
+        "geography": "India",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.1725426022938576105185544112262063298396",
+          "Ground Transport": "11.39904846524233081111095315283662922742",
+          "Industry": "28.96345036185609965746910863387115223427",
+          "International Aviation": "0.2460211337531833255361089993020396991857",
+          "Power": "50.31650874609527012183740306024527455645",
+          "Residential": "8.902428690759258473527871742518697952841"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "3.9076653346",
+          "Ground Transport": "258.160396",
+          "Industry": "655.950875",
+          "International Aviation": "5.57177325",
+          "Power": "1139.54510",
+          "Residential": "201.618102"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-8.372118466219644217640938768218442983230"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "2487.49081695",
+        "first_day": "2021-01-01",
+        "geography": "India",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.2082309809831195646376353952312426847289",
+          "Ground Transport": "10.81065458282676053358123332789737155697",
+          "Industry": "29.92864194420719829222604117642107543058",
+          "International Aviation": "0.2429522303688358144875281325407909663158",
+          "Power": "51.38410486946903380004455778861362843352",
+          "Residential": "7.425415392145051995023004179295890927892"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "5.17972653",
+          "Ground Transport": "268.914040",
+          "Industry": "744.47222",
+          "International Aviation": "6.04341442",
+          "Power": "1278.17489",
+          "Residential": "184.706526"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "9.834927504752855852655807807339918423400"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "2662.59300347",
+        "first_day": "2022-01-01",
+        "geography": "India",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.2418918273129371853768518007605083658528",
+          "Ground Transport": "10.91496648647580245720204532705858639120",
+          "Industry": "29.05256976908884793930641958820094698249",
+          "International Aviation": "0.3934764564597881448965482659982120876102",
+          "Power": "52.21531635470116996821780129756377692627",
+          "Residential": "7.181779105961454305000333720417969246576"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "6.44059487",
+          "Ground Transport": "290.621134",
+          "Industry": "773.55169",
+          "International Aviation": "10.4766766",
+          "Power": "1390.28136",
+          "Residential": "191.221548"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "7.039309867069135593658538028557846491700"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "1221.4351654",
+        "first_day": "2023-01-01",
+        "geography": "India",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.2415254598498396892479054541555120679187",
+          "Ground Transport": "9.931672383140640172041996130988419305584",
+          "Industry": "27.44331991540678463587323208076353947751",
+          "International Aviation": "0.4140908697633276769910819860860704837866",
+          "Power": "53.99222641375574726841739577117303781861",
+          "Residential": "7.977164958083660557428388576833420846588"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "2.9500769",
+          "Ground Transport": "121.308939",
+          "Industry": "335.20236",
+          "International Aviation": "5.0578515",
+          "Power": "659.48004",
+          "Residential": "97.435898"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "Italy": {
+    "cagr_complete_years_fraction": "0.001500021656517959034494782217221971941",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "148.28027359",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "123.728009105",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "137.476207382",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "148.27674989",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "141.38931490",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "331.21940608",
+        "first_day": "2019-01-01",
+        "geography": "Italy",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5697826713523463848365584268123327467564",
+          "Ground Transport": "27.51224968321759512286122628385820454400",
+          "Industry": "16.42019428863532367094811499759815039398",
+          "International Aviation": "4.524461557780956455726279164759741362555",
+          "Power": "28.34375198937618963319409137924869260124",
+          "Residential": "22.62955980963758873243372974772287835146"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.88723078",
+          "Ground Transport": "91.125910",
+          "Industry": "54.3868700",
+          "International Aviation": "14.9858947",
+          "Power": "93.880007",
+          "Residential": "74.9534936"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "296.657934955",
+        "first_day": "2020-01-01",
+        "geography": "Italy",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.3377788209683319171744889826488275266232",
+          "Ground Transport": "27.58718606748686285110461929258594707122",
+          "Industry": "16.17113623044568529869277165446855390688",
+          "International Aviation": "1.634296847895012004837408243328072013141",
+          "Power": "29.24188898340401716965090036318863514082",
+          "Residential": "25.02771304980009075853981146377996434132"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.002047675",
+          "Ground Transport": "81.8395765",
+          "Industry": "47.9729588",
+          "International Aviation": "4.84827128",
+          "Power": "86.748384",
+          "Residential": "74.2466967"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-10.43461539105963727474116965846109399557"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "321.126078702",
+        "first_day": "2021-01-01",
+        "geography": "Italy",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4574919009811488605146340681765710853917",
+          "Ground Transport": "28.22702670751214185515782501376050449674",
+          "Industry": "16.95504081140853764729504955246541893795",
+          "International Aviation": "2.014092697218152823305918861062554251773",
+          "Power": "28.12728457467302368566758808252674255271",
+          "Residential": "24.21906330820699512805898442200820867544"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.469125802",
+          "Ground Transport": "90.644344",
+          "Industry": "54.4470577",
+          "International Aviation": "6.46777690",
+          "Power": "90.324046",
+          "Residential": "77.7737283"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "8.247931662677949014984236661912618820700"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "332.71215184",
+        "first_day": "2022-01-01",
+        "geography": "Italy",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5885555514490762821066187120723471318582",
+          "Ground Transport": "27.23723389687899774547651520487968961465",
+          "Industry": "16.35686562664864281922525886904197421393",
+          "International Aviation": "3.480464249940814545272546363871937620780",
+          "Power": "30.46450706397499160245880846694595439577",
+          "Residential": "21.87237361110747700546025238318809702301"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.95819584",
+          "Ground Transport": "90.621587",
+          "Industry": "54.4212796",
+          "International Aviation": "11.5799275",
+          "Power": "101.359117",
+          "Residential": "72.7720449"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "3.607951488970067559393331404576495821000"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "141.38931490",
+        "first_day": "2023-01-01",
+        "geography": "Italy",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.5214666331196714780884761186433897912607",
+          "Ground Transport": "27.61839466272143313143672358228535415302",
+          "Industry": "16.57982430750147159812003587266833839082",
+          "International Aviation": "3.476617100434086621350479434284322994481",
+          "Power": "23.58501703158051019030717433655235852621",
+          "Residential": "28.21868026464282698069711065556623614420"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "0.73729810",
+          "Ground Transport": "39.049459",
+          "Industry": "23.4421000",
+          "International Aviation": "4.9155651",
+          "Power": "33.346694",
+          "Residential": "39.8981987"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "Japan": {
+    "cagr_complete_years_fraction": "-0.0084465536657727038373812963368948911958",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "478.1546993",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "440.30242184",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "450.38669769",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "462.0665756",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "437.6410985",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "1108.48727122",
+        "first_day": "2019-01-01",
+        "geography": "Japan",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.8131746528834083259090939694696767760328",
+          "Ground Transport": "16.07785101617361989215102464061292281548",
+          "Industry": "24.25153431884980341813329063298795071210",
+          "International Aviation": "1.765912086519123719342910507579982565567",
+          "Power": "47.32034409584981540028260785679137155514",
+          "Residential": "9.771183829724229244181072392558095575675"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "9.01393752",
+          "Ground Transport": "178.220932",
+          "Industry": "268.825171",
+          "International Aviation": "19.5749107",
+          "Power": "524.539991",
+          "Residential": "108.312329"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "1049.08506611",
+        "first_day": "2020-01-01",
+        "geography": "Japan",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.6203376361205039401702288330747001867642",
+          "Ground Transport": "15.97246614341093739697253195512843329803",
+          "Industry": "22.97607513314142605033941369103681864249",
+          "International Aviation": "0.8324242611117612947487198884381419764408",
+          "Power": "49.26500792890025671933544782809166472198",
+          "Residential": "10.33368889731511459843365780423024117430"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "6.50786950",
+          "Ground Transport": "167.564757",
+          "Industry": "241.038573",
+          "International Aviation": "8.73283861",
+          "Power": "516.831841",
+          "Residential": "108.409187"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-5.358853155311561810285737058082228395040"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "1046.68180899",
+        "first_day": "2021-01-01",
+        "geography": "Japan",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.6255194304291718079379477570335604041919",
+          "Ground Transport": "16.44144318950747564955060259052950257771",
+          "Industry": "24.30964021869524666802244240272281680977",
+          "International Aviation": "0.7991110410212461334657746605918683226164",
+          "Power": "47.56024082240986229676998105062863456195",
+          "Residential": "10.26404529793699744425325153849361732376"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "6.54719809",
+          "Ground Transport": "172.089595",
+          "Industry": "254.444582",
+          "International Aviation": "8.3641499",
+          "Power": "497.804389",
+          "Residential": "107.431895"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "-0.2290812439939937751059938210371404521400"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "1080.6351642",
+        "first_day": "2022-01-01",
+        "geography": "Japan",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.8469043025057614537322678769072023503194",
+          "Ground Transport": "16.56792171227773933288779425043995805962",
+          "Industry": "23.53557263595846254805780824136538865371",
+          "International Aviation": "0.8655435071765731459805479463408340566751",
+          "Power": "47.88424772231745593606882554932872320462",
+          "Residential": "10.29981011976400758327275613561789367505"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "9.1519457",
+          "Ground Transport": "179.038788",
+          "Industry": "254.333674",
+          "International Aviation": "9.3533675",
+          "Power": "517.454019",
+          "Residential": "111.303370"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "3.243904204541725289548255875817444878100"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "437.6410985",
+        "first_day": "2023-01-01",
+        "geography": "Japan",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.8910622456085440065222759237727304077681",
+          "Ground Transport": "17.21298805304045273526796067120282123138",
+          "Industry": "23.17186693561870766577467586719349211212",
+          "International Aviation": "1.293595807021766718282743730934127522304",
+          "Power": "43.82688204042153047470243473945580547436",
+          "Residential": "13.60360491828899839944990906744102325207"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "3.8996546",
+          "Ground Transport": "75.331110",
+          "Industry": "101.409613",
+          "International Aviation": "5.6613069",
+          "Power": "191.804448",
+          "Residential": "59.534966"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "ROW": {
+    "cagr_complete_years_fraction": "-0.0054124972834589791598524047770454715716",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4634.813407",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "4134.8361863",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4332.8529843",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4526.248402",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "4501.189761",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "10892.232158",
+        "first_day": "2019-01-01",
+        "geography": "ROW",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.6361470541105592912941656012763807269559",
+          "Ground Transport": "19.99068940520832405856621478008713592827",
+          "Industry": "32.85178995539364081189280137633291161439",
+          "International Aviation": "2.544641079803176189333661097677826414908",
+          "Power": "34.64793666951144689327140579296492075376",
+          "Residential": "9.328795835972852755641751351660824561723"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "69.290614",
+          "Ground Transport": "2177.43230",
+          "Industry": "3578.29323",
+          "International Aviation": "277.168214",
+          "Power": "3773.93370",
+          "Residential": "1016.11410"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "9970.4670212",
+        "first_day": "2020-01-01",
+        "geography": "ROW",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4076816102352226694108991493065408104456",
+          "Ground Transport": "18.85180399276601139679420817379595025143",
+          "Industry": "33.81047690977944057311215812158269495526",
+          "International Aviation": "1.205086887550217856789996038906912181262",
+          "Power": "35.43678036833583183127534198518111036466",
+          "Residential": "10.28817023133327567261739653122679143695"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "40.6477605",
+          "Ground Transport": "1879.61290",
+          "Industry": "3371.06245",
+          "International Aviation": "120.1527907",
+          "Power": "3533.21250",
+          "Residential": "1025.77862"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-8.462591720678599953873660356110819502790"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "10312.4043683",
+        "first_day": "2021-01-01",
+        "geography": "ROW",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4755679718180470799450118959897341790509",
+          "Ground Transport": "20.22951365651211107580632903642341939719",
+          "Industry": "34.58429860414727973153077351093073117812",
+          "International Aviation": "1.351249631253271381670088771823360036850",
+          "Power": "33.72956786578572319617405862387608251446",
+          "Residential": "9.629802270483567534873738160956672694326"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "49.0424923",
+          "Ground Transport": "2086.14925",
+          "Industry": "3566.47272",
+          "International Aviation": "139.346326",
+          "Power": "3478.32943",
+          "Residential": "993.06415"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "3.429501811429149868075589919388679959400"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "10716.325168",
+        "first_day": "2022-01-01",
+        "geography": "ROW",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.6080377179536514041694857238396930286205",
+          "Ground Transport": "21.32432969488258439901046496501756767148",
+          "Industry": "35.19230436625362393072169607013179053620",
+          "International Aviation": "1.909856091444051634996076110108569262481",
+          "Power": "31.51778400757837101122200662211186087443",
+          "Residential": "9.447688121887717619880270508790518626786"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "65.159299",
+          "Ground Transport": "2285.18451",
+          "Industry": "3771.32177",
+          "International Aviation": "204.666389",
+          "Power": "3377.54822",
+          "Residential": "1012.44498"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "3.916844077038324567849073956100445828900"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "4501.189761",
+        "first_day": "2023-01-01",
+        "geography": "ROW",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.6226807463850000524339147051569950463148",
+          "Ground Transport": "21.91176227551184994353318489209102242068",
+          "Industry": "34.15306333715798212933862576605998815610",
+          "International Aviation": "2.268120528589285574001375677616094177372",
+          "Power": "29.76363919619251084491214366289855247896",
+          "Residential": "11.28073391616337145578075529617734772058"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "28.028042",
+          "Ground Transport": "986.29000",
+          "Industry": "1537.29419",
+          "International Aviation": "102.092409",
+          "Power": "1339.71788",
+          "Residential": "507.76724"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "Russia": {
+    "cagr_complete_years_fraction": "0.062780235026685015402052565954303148154",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "702.0136412",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "687.38276539",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "829.61012774",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "810.23473216",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "830.4725740",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "1557.8678521",
+        "first_day": "2019-01-01",
+        "geography": "Russia",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.9899113188074240254103771039618078527522",
+          "Ground Transport": "14.91606638437031779866458674450748042367",
+          "Industry": "18.25086156163579004507015207057047916600",
+          "International Aviation": "0.8522916678781114184081570342072790244466",
+          "Power": "53.94809571730297855088526606614350585712",
+          "Residential": "11.04277335000537816156146098060944767601"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "15.4215102",
+          "Ground Transport": "232.372603",
+          "Industry": "284.324305",
+          "International Aviation": "13.2775779",
+          "Power": "840.44004",
+          "Residential": "172.031816"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "1674.01265600",
+        "first_day": "2020-01-01",
+        "geography": "Russia",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.8014386899593428163424828969751827252613",
+          "Ground Transport": "13.31009285989531969225446524939534268372",
+          "Industry": "17.19629089829294576133718310430742645473",
+          "International Aviation": "0.3149182224581699936681960187044129491934",
+          "Power": "58.49352551131489175551370502900188348397",
+          "Residential": "9.883733818079329980883967701615751703134"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "13.4161851",
+          "Ground Transport": "222.812639",
+          "Industry": "287.868086",
+          "International Aviation": "5.27177090",
+          "Power": "979.18902",
+          "Residential": "165.454955"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "7.455369448919383089694864369683721776300"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "1908.61021714",
+        "first_day": "2021-01-01",
+        "geography": "Russia",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.9728086139988460483234233641507959762844",
+          "Ground Transport": "12.16421833620364059537646827793717843285",
+          "Industry": "15.84684988500270666637619757995214186722",
+          "International Aviation": "0.3720648918374258682608531684515658004658",
+          "Power": "61.12701690071808812595257508378235800268",
+          "Residential": "9.517041372239292695710482525725959920500"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "18.5671246",
+          "Ground Transport": "232.167514",
+          "Industry": "302.454596",
+          "International Aviation": "7.10126854",
+          "Power": "1166.67649",
+          "Residential": "181.643224"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "14.01408527582840448967310555386864410900"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "1870.08360398",
+        "first_day": "2022-01-01",
+        "geography": "Russia",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.9192428917837754904115375099605604318208",
+          "Ground Transport": "12.14908068903799747649183707271829369050",
+          "Industry": "15.94428224307285335937390372798941350141",
+          "International Aviation": "0.2573106020372050767633723938768180590270",
+          "Power": "61.25968098762347826014759796011930168187",
+          "Residential": "9.470402586444690336811751335335612635373"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "17.1906106",
+          "Ground Transport": "227.197966",
+          "Industry": "298.171408",
+          "International Aviation": "4.81192338",
+          "Power": "1145.60725",
+          "Residential": "177.104446"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "-2.018568946871251264730091729849409664890"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "830.4725740",
+        "first_day": "2023-01-01",
+        "geography": "Russia",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.7552842076155063972046354416997279430928",
+          "Ground Transport": "11.38402374260706169930664079943475652936",
+          "Industry": "14.33566293785880037984252566057648039801",
+          "International Aviation": "0.2822472256621445032813329245476082392578",
+          "Power": "62.24303320581421151181808925095219339537",
+          "Residential": "10.99974868044227550854677592278923349490"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "6.2724282",
+          "Ground Transport": "94.541195",
+          "Industry": "119.053749",
+          "International Aviation": "2.3439858",
+          "Power": "516.91132",
+          "Residential": "91.349896"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "Spain": {
+    "cagr_complete_years_fraction": "-0.0099951106737087006156208858244219289044",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "111.5880979",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "87.238855864",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "97.84549373",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "108.50304752",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "106.4086114",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "268.74787757",
+        "first_day": "2019-01-01",
+        "geography": "Spain",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "2.096849813644465017383765007718568677662",
+          "Ground Transport": "31.56449050575473164284681200877846248064",
+          "Industry": "23.16249983547730534733837526097787965500",
+          "International Aviation": "9.025064353738925790170287743716524265163",
+          "Power": "20.49504781136493497778212053620870573188",
+          "Residential": "13.65604768001963722447863944259985918965"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "5.63523937",
+          "Ground Transport": "84.8288983",
+          "Industry": "62.2487267",
+          "International Aviation": "24.2546689",
+          "Power": "55.080006",
+          "Residential": "36.7003383"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "220.909928102",
+        "first_day": "2020-01-01",
+        "geography": "Spain",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "1.363961940456002874046872655027161066239",
+          "Ground Transport": "34.22442239222996313679729124734799738276",
+          "Industry": "25.34400603043477242406078378127849489096",
+          "International Aviation": "3.825453130426097376196410998911583901793",
+          "Power": "18.82864946694237189001246728584660231678",
+          "Residential": "16.41350703951079229888617403158816044147"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "3.013127342",
+          "Ground Transport": "75.6051469",
+          "Industry": "55.9874255",
+          "International Aviation": "8.45080576",
+          "Power": "41.594356",
+          "Residential": "36.2590666"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-17.80030782030633321961233600673604009962"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "242.89645786",
+        "first_day": "2021-01-01",
+        "geography": "Spain",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "1.797871541015645504975582520419386077909",
+          "Ground Transport": "36.15309806230864728675133920703441253550",
+          "Industry": "24.92836982204973847369550109420438791738",
+          "International Aviation": "4.946873690898211108231761679918966274875",
+          "Power": "16.87862489276400846070370109924994523343",
+          "Residential": "15.29516199096374916564211439917290196090"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "4.36696629",
+          "Ground Transport": "87.8145946",
+          "Industry": "60.5501273",
+          "International Aviation": "12.01578097",
+          "Power": "40.997582",
+          "Residential": "37.1514067"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "9.952712377801432887453812603115379741900"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "260.76966042",
+        "first_day": "2022-01-01",
+        "geography": "Spain",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "2.255558108457347355700483371438981758827",
+          "Ground Transport": "32.17095373168872265542983982384863052697",
+          "Industry": "23.68432589148823189620657021063432192048",
+          "International Aviation": "8.250718379334076980733447549427153562422",
+          "Power": "20.06193470350035132357749150762958224049",
+          "Residential": "13.57650918553126978835216753702132999081"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "5.88181122",
+          "Ground Transport": "83.8920868",
+          "Industry": "61.7615362",
+          "International Aviation": "21.5153703",
+          "Power": "52.315439",
+          "Residential": "35.4034169"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "7.358362784483958139182721797802341982700"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "106.4086114",
+        "first_day": "2023-01-01",
+        "geography": "Spain",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "2.309447015300492869696446391179952941290",
+          "Ground Transport": "35.06832342706428739281527735451681685981",
+          "Industry": "24.75498312911919081767098409856704511041",
+          "International Aviation": "8.357764548368122018365141451324305130440",
+          "Power": "12.71218731456916653270037879659803548569",
+          "Residential": "16.79729456557874036875177190781384447237"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "2.4574505",
+          "Ground Transport": "37.315716",
+          "Industry": "26.3414338",
+          "International Aviation": "8.8933812",
+          "Power": "13.526862",
+          "Residential": "17.8737679"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "UK": {
+    "cagr_complete_years_fraction": "-0.0054430968387031632399416867799910951364",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "166.04052134",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "139.009115657",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "157.312514045",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "158.71353706",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "158.17150222",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "380.112683798",
+        "first_day": "2019-01-01",
+        "geography": "UK",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.6344985581385353316543999804915449652801",
+          "Ground Transport": "29.93952000309409048982171370778036485878",
+          "Industry": "16.10263074844598295800644357744531777488",
+          "International Aviation": "9.506537387529852995594933383254783845670",
+          "Power": "20.08615004296305542037249458088392521345",
+          "Residential": "23.73066325982848280455001477014406334194"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "2.411809498",
+          "Ground Transport": "113.803913",
+          "Industry": "61.2081419",
+          "International Aviation": "36.1355544",
+          "Power": "76.350004",
+          "Residential": "90.203261"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "332.770408227",
+        "first_day": "2020-01-01",
+        "geography": "UK",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.3121285971712569118890063115263409097468",
+          "Ground Transport": "31.33921208789093667261650673973406003721",
+          "Industry": "18.41498861827821416034939436562125884404",
+          "International Aviation": "4.455766033704959457659991819678815482093",
+          "Power": "18.90353993167834934261647057038215122939",
+          "Residential": "26.57436473127628345486863019305737349751"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.038671607",
+          "Ground Transport": "104.287624",
+          "Industry": "61.2796328",
+          "International Aviation": "14.82747082",
+          "Power": "62.905387",
+          "Residential": "88.431622"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-12.45480027079514572236852647600268542513"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "360.302555417",
+        "first_day": "2021-01-01",
+        "geography": "UK",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.3533779313683784524353045049444015778300",
+          "Ground Transport": "32.00351128971188059487989418208562003139",
+          "Industry": "18.65158689263884977382300173895743890813",
+          "International Aviation": "4.029448662443484220535341693696184068772",
+          "Power": "19.73250589847064792626224872246227141723",
+          "Residential": "25.22956932536675903206420915785408399664"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.273229717",
+          "Ground Transport": "115.309469",
+          "Industry": "67.2021442",
+          "International Aviation": "14.5182065",
+          "Power": "71.096723",
+          "Residential": "90.902783"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "8.273616436236388750571654657526622357400"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "373.939437198",
+        "first_day": "2022-01-01",
+        "geography": "UK",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4792179480794234770168789432890384579275",
+          "Ground Transport": "31.84159523055431070874251350939746514391",
+          "Industry": "17.11331700649579582244980602876325774193",
+          "International Aviation": "8.068098734401518742695489721631829474881",
+          "Power": "19.46496163801502860922643025579879345369",
+          "Residential": "23.03280944245392263986888154111961572766"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "1.791984898",
+          "Ground Transport": "119.068282",
+          "Industry": "63.9934413",
+          "International Aviation": "30.1698030",
+          "Power": "72.787168",
+          "Residential": "86.128758"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "3.784841815850350999565916575809496515700"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "158.17150222",
+        "first_day": "2023-01-01",
+        "geography": "UK",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.4911177482019112102480985085759527535706",
+          "Ground Transport": "31.34072086579187576739194985436612362725",
+          "Industry": "16.63038760510293900400182972985612452129",
+          "International Aviation": "8.206818433035427233486130824205306077670",
+          "Power": "15.42379168029121851758056850299287749914",
+          "Residential": "27.90716366757662826729142258000361552108"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "0.77680832",
+          "Ground Transport": "49.572089",
+          "Industry": "26.3045339",
+          "International Aviation": "12.9808480",
+          "Power": "24.396043",
+          "Residential": "44.141180"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "US": {
+    "cagr_complete_years_fraction": "-0.0041251062411733441662959095787651584091",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "2145.763678",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "1878.3113051",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "2011.2933334",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "2097.636969",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "1992.623969",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "5111.445643",
+        "first_day": "2019-01-01",
+        "geography": "US",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "3.398777589230835923026169995798192624935",
+          "Ground Transport": "32.19036481887126271842464744371732331851",
+          "Industry": "19.55599374061464513161800241802943105268",
+          "International Aviation": "1.597250146087487210709637590486257666342",
+          "Power": "31.41787259733948421839844653905087023147",
+          "Residential": "11.83974110785628479782309601291792510607"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "173.726669",
+          "Ground Transport": "1645.39300",
+          "Industry": "999.59399",
+          "International Aviation": "81.642573",
+          "Power": "1605.90748",
+          "Residential": "605.181931"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "4597.5765221",
+        "first_day": "2020-01-01",
+        "geography": "US",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "2.631480964339423321852011508034840893334",
+          "Ground Transport": "32.33597902838046598524063748067746380664",
+          "Industry": "20.73261174486368643099522756717707052082",
+          "International Aviation": "0.9616664102809757124847050949751499297617",
+          "Power": "31.24142128131301125342502757687814233238",
+          "Residential": "12.09684057082243729600239077225733251706"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "120.984351",
+          "Ground Transport": "1486.67138",
+          "Industry": "953.19769",
+          "International Aviation": "44.2133491",
+          "Power": "1436.34825",
+          "Residential": "556.161502"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-10.05330305338825648546567161449906080905"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "4881.7237584",
+        "first_day": "2021-01-01",
+        "geography": "US",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "3.254925101539928216352800172815284467572",
+          "Ground Transport": "32.62349733041789233249622214018802969390",
+          "Industry": "20.00553264243056068127232522678336071250",
+          "International Aviation": "1.104700123746354750313476893764583481885",
+          "Power": "31.45457211415979739555268810066473342626",
+          "Residential": "11.55677268770546662401248746578400821788"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "158.896452",
+          "Ground Transport": "1592.58902",
+          "Industry": "976.61484",
+          "International Aviation": "53.9284084",
+          "Power": "1535.52532",
+          "Residential": "564.169718"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "6.180369917371429235835752572693432756000"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "5048.450452",
+        "first_day": "2022-01-01",
+        "geography": "US",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "3.071119316196866182494921314917561956098",
+          "Ground Transport": "30.80474741282060224526097815013278850736",
+          "Industry": "20.30615512119915721022906852132060897168",
+          "International Aviation": "1.306482704487479834733257673259620613585",
+          "Power": "32.53858497015115401592139860819218356072",
+          "Residential": "11.97291047514474051136037573217723639055"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "155.043937",
+          "Ground Transport": "1555.16241",
+          "Industry": "1025.14618",
+          "International Aviation": "65.957132",
+          "Power": "1642.69434",
+          "Residential": "604.446453"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "3.415324214384576062742092088469042611600"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "1992.623969",
+        "first_day": "2023-01-01",
+        "geography": "US",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "3.236467693017096292893182597263036335583",
+          "Ground Transport": "32.26018757179769727039753379580068676771",
+          "Industry": "21.37116569031896454117179195689982187502",
+          "International Aviation": "1.430289379400715218436680362947094510234",
+          "Power": "28.68590004399369944545718751213114610487",
+          "Residential": "13.01598962147182723164362377495821440658"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "64.490631",
+          "Ground Transport": "642.82423",
+          "Industry": "425.84697",
+          "International Aviation": "28.500289",
+          "Power": "571.60212",
+          "Residential": "259.359729"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  },
+  "WORLD": {
+    "cagr_complete_years_fraction": "0.007257168767901222570901751422143415965",
+    "matched_ytd": [
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "14870.756694",
+        "first_day": "2019-01-01",
+        "last_day": "2019-05-31",
+        "year": 2019
+      },
+      {
+        "calendar_days": 152,
+        "derived_six_sector_total_mt_co2": "13405.046734",
+        "first_day": "2020-01-01",
+        "last_day": "2020-05-31",
+        "year": 2020
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "14888.915138",
+        "first_day": "2021-01-01",
+        "last_day": "2021-05-31",
+        "year": 2021
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "15062.564919",
+        "first_day": "2022-01-01",
+        "last_day": "2022-05-31",
+        "year": 2022
+      },
+      {
+        "calendar_days": 151,
+        "derived_six_sector_total_mt_co2": "15113.988959",
+        "first_day": "2023-01-01",
+        "last_day": "2023-05-31",
+        "year": 2023
+      }
+    ],
+    "periods": [
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "35344.364079",
+        "first_day": "2019-01-01",
+        "geography": "WORLD",
+        "last_day": "2019-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "1.029024933613376951542917021455232729751",
+          "Ground Transport": "18.41334133343992367943715239364513564035",
+          "Industry": "30.40462483914082136851790887755358106524",
+          "International Aviation": "1.789980825757439425566188866215588985247",
+          "Power": "38.26754831341324130886480052660392356751",
+          "Residential": "10.09547975463519726607103231452653801190"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "363.702319",
+          "Ground Transport": "6508.0784",
+          "Industry": "10746.3213",
+          "International Aviation": "632.65734",
+          "Power": "13525.4216",
+          "Residential": "3568.18312"
+        },
+        "year": 2019,
+        "yoy_percent_complete_years_only": null
+      },
+      {
+        "complete_year": true,
+        "days": 366,
+        "derived_six_sector_total_mt_co2": "33453.825065",
+        "first_day": "2020-01-01",
+        "geography": "WORLD",
+        "last_day": "2020-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.7523334880569956731792338019150217613539",
+          "Ground Transport": "17.33420115258201192485969018144024302771",
+          "Industry": "31.31262054382958195814909573779108299405",
+          "International Aviation": "0.8313663548476500649747150221729061940977",
+          "Power": "39.27364650969546761453420064985923008084",
+          "Residential": "10.49583195098829276430306460682151594195"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "251.684329",
+          "Ground Transport": "5798.95333",
+          "Industry": "10475.2693",
+          "International Aviation": "278.123846",
+          "Power": "13138.5370",
+          "Residential": "3511.25726"
+        },
+        "year": 2020,
+        "yoy_percent_complete_years_only": "-5.348912233289469675282087284205060375330"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "35507.981996",
+        "first_day": "2021-01-01",
+        "geography": "WORLD",
+        "last_day": "2021-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.8899104208050922658240721498421478471902",
+          "Ground Transport": "17.76201700426253646340842872607161158593",
+          "Industry": "30.94080931222065047934525262284353446195",
+          "International Aviation": "0.9221097781250547866251655514104029399824",
+          "Power": "39.55872175890578312886446581265749946732",
+          "Residential": "9.926431725680882875932615137174803697622"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "315.989232",
+          "Ground Transport": "6306.9338",
+          "Industry": "10986.4570",
+          "International Aviation": "327.422574",
+          "Power": "14046.5038",
+          "Residential": "3524.67559"
+        },
+        "year": 2021,
+        "yoy_percent_complete_years_only": "6.140275221170736399317630616061213028900"
+      },
+      {
+        "complete_year": true,
+        "days": 365,
+        "derived_six_sector_total_mt_co2": "36119.462025",
+        "first_day": "2022-01-01",
+        "geography": "WORLD",
+        "last_day": "2022-12-31",
+        "period_kind": "full_calendar_year",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.8667405865107150637302439168873529200910",
+          "Ground Transport": "17.90313237645737056073996163014556969997",
+          "Industry": "30.77801931907373141447003597778530312980",
+          "International Aviation": "1.308821315424893845716130928447846947133",
+          "Power": "39.29246617841894614984925152688511007799",
+          "Residential": "9.850820224114342965494376019848817225012"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "313.062037",
+          "Ground Transport": "6466.5151",
+          "Industry": "11116.8550",
+          "International Aviation": "472.739218",
+          "Power": "14192.2274",
+          "Residential": "3558.06327"
+        },
+        "year": 2022,
+        "yoy_percent_complete_years_only": "1.722091751282524785698328312287454501100"
+      },
+      {
+        "complete_year": false,
+        "days": 151,
+        "derived_six_sector_total_mt_co2": "15113.988959",
+        "first_day": "2023-01-01",
+        "geography": "WORLD",
+        "last_day": "2023-05-31",
+        "period_kind": "partial_calendar_period",
+        "sector_shares_percent": {
+          "Domestic Aviation": "0.9406004555491352201933284474354497905783",
+          "Ground Transport": "18.17537254692922394108518813825342294932",
+          "Industry": "30.14468392400788705644309846422192295053",
+          "International Aviation": "1.439033736163257971320051696750746580984",
+          "Power": "37.77656524355278907412625164932807067826",
+          "Residential": "11.52374409379770673683208160401038705033"
+        },
+        "sector_totals_mt_co2": {
+          "Domestic Aviation": "142.162249",
+          "Ground Transport": "2747.0238",
+          "Industry": "4556.0642",
+          "International Aviation": "217.49540",
+          "Power": "5709.5459",
+          "Residential": "1741.69741"
+        },
+        "year": 2023,
+        "yoy_percent_complete_years_only": null
+      }
+    ]
+  }
+}

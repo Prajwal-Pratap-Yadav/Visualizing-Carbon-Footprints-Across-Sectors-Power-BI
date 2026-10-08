@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-07T07:52:01.527656+00:00",
+  "primary_download_url": "https://datas.carbonmonitor.org/API/downloadFullDataset.php?source=carbon_global",
+  "primary_current_sha256": "8b93c6a55085241d09457a8efdb1c9728b79e666a81e9c29b6c587a7937d2d6b",
+  "original_rows": 135408,
+  "matching_grains_in_current": 96720,
+  "duplicate_primary_grains_in_scope": 0,
+  "identical_decimal_values": 2,
+  "changed_decimal_values": 96718,
+  "maximum_value_difference": "7.22671",
+  "scope": "Comparison against current mutable primary download, not proof of original release vintage or original uploader lineage. Raw snapshot preserved."
+}
