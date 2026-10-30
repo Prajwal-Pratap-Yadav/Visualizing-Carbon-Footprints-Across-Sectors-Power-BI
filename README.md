@@ -11,6 +11,8 @@ Reproducible emissions analytics that reconcile overlapping geographies and comp
 
 *Python re-creation, not a Power BI export. Fixed licensed snapshot; documented MtCO2 interpretation.* Open the [offline companion report](docs/assets/carbon-report.html) from a clone or downloaded evidence archive. Start with the [engineering case study](docs/CASE_STUDY.md) for the problem, intervention and measured outcome.
 
+**Review the project:** [code, tests, and evidence](docs/REVIEW_GUIDE.md).
+
 ## Why this matters
 
 - **Problem:** countries, a European composite, ROW and WORLD share one source field. An unrestricted sum double-counts geography coverage.
@@ -117,3 +119,4 @@ The six-sector total is derived; there is no independent all-sector inventory to
 Code and invented packaging fixture: [MIT](LICENSE). Real archived database and derived databases: **ODbL 1.0 / DbCL 1.0**, attributed to **Saloni Jhalani, CO2 Emissions by Sectors, Kaggle v1**; see [data reuse terms](data/LICENSE.md) and [source receipt](data/source-receipt.json). Original report/license bytes are preserved; embedded data retains its own terms. Figures/report attribute the source and are labelled Python re-creations.
 
 Cite the software using [CITATION.cff](CITATION.cff), and separately cite the [immediate source](https://www.kaggle.com/datasets/saloni1712/co2-emissions) and referenced [Carbon Monitor methods](https://doi.org/10.1038/s41597-020-00708-7). That methods citation does not establish this upload's primary historical release lineage.
+
